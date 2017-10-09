@@ -12,3 +12,7 @@ res.render('index', { title: 'Properties in Kenya' });
 module.exports.addProperty = function(req, res){
 res.render('index', { title: 'Add Property' });
 };
+
+module.exports.homelist = function(req, res){
+res.render('property-list', { title: 'Home' });
+};

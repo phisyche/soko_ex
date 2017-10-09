@@ -23,11 +23,17 @@ html
         li
           a(href='/blog/') Blog
         li
-          a(href='/login/') Login/Register
+          a(href='/account/login/') Login/Register
         li
           a(href='/property/new')
             button.btn.btn-info(type='button') ADD PROPERTY +
-  block content
+  .container
+    block content
+    footer
+      .row
+        .col-xs-12
+          small &copy; Sokoestate 2017 All Rights Reserved.
+
   script(src='/javascripts/jquery-3.2.1.js')
   script(src='/bootstrap/js/bootstrap.min.js')
   script(src='/javascripts/usebootstrap.js')
