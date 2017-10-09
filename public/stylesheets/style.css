@@ -1,0 +1,18 @@
+.page_body {
+  margin-left: 50px;
+}
+.navbar-default {
+  padding-top: 10px;
+  height: 70px;
+}
+
+.navbar-default .navbar-brand {
+  margin-left: 50px;
+}
+.navbar-right {
+  margin-right: 50px;
+}
+
+.dropdown-menu > li > a {
+  text-align: center;
+}
