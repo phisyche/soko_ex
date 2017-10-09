@@ -17,3 +17,13 @@ res.render('index', { title: 'My Profile' });
 module.exports.messages = function(req, res){
 res.render('index', { title: 'Messages' });
 };
+
+/* GET 'Inbox' page */
+module.exports.login = function(req, res){
+res.render('index', { title: 'Sign In' });
+};
+
+/* GET 'Inbox' page */
+module.exports.register = function(req, res){
+res.render('index', { title: 'Create an Account' });
+};
