@@ -3,7 +3,7 @@ module.exports.homelist = function(req, res){
 res.render('index', { title: 'Home' });
 };
 
-/* GET 'Location info' page */
+/* GET 'Property info' page */
 module.exports.propertyInfo = function(req, res){
 res.render('index', { title: 'Properties in Kenya' });
 };
