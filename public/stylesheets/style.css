@@ -1,18 +1,35 @@
 .page_body {
   margin-left: 50px;
 }
+.navbar {
+    margin-bottom: 0px;
+}
 .navbar-default {
   padding-top: 10px;
   height: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-
+.navbar-default img {
+  padding-top: 8px;
+}
+.navbar-default a {
+  font-size: 12px;
+}
 .navbar-default .navbar-brand {
   margin-left: 50px;
 }
 .navbar-right {
   margin-right: 50px;
 }
-
+.btn{
+   font-size: 11px;
+}
 .dropdown-menu > li > a {
   text-align: center;
+}
+.jumbotron {
+  width: 100%;
+  padding-left: 50px;
+  height: 450px;
 }
