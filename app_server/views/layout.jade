@@ -15,7 +15,7 @@ html
         span.icon-bar
         span.icon-bar
       a(href='/')  
-        img(src='images/logo.png')
+        img(src='/images/logo.png')
     .navbar-collapse.collapse.navbar-responsive-collapse
       ul.nav.navbar-nav
       form.navbar-form.navbar-left
@@ -23,12 +23,28 @@ html
       ul.nav.navbar-nav.navbar-right
         li
           a(href='/blog/') Blog
-        li
-          a(href='/account/login/') Login/Register
+        if user
+          li
+            a(href='#') Welcome 
+              = user.names
+        else
+          li
+            a(href='/login/') Login/Register
         li
           a(href='/property/new')
             button.btn.btn-info(type='button') ADD PROPERTY +
     block content
+      if errors
+        each error in errors
+          .alert.alert-danger=error.msg
+        if message    
+          .alert.alert-info=message
+        if success_msg     
+          .alert.alert-success=success_msg
+        if error_msg     
+          .alert alert-danger=error_msg
+        if error    
+          .alert.alert-danger=error
     footer
       .row
         .col-xs-12

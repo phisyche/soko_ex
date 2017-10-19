@@ -14,8 +14,9 @@ router.get('/account', ctrlAccounts.overview);
 router.get('/account/mylisting', ctrlAccounts.mylisting);
 router.get('/account/profile', ctrlAccounts.myprofile);
 router.get('/account/inbox', ctrlAccounts.messages);
-router.get('/account/login', ctrlAccounts.login);
-router.get('/account/create', ctrlAccounts.register);
+router.get('/login', ctrlAccounts.login);
+router.get('/register', ctrlAccounts.register);
+router.post('/register', ctrlAccounts.registerPost);
 
 /* Other pages */
 router.get('/about', ctrlOthers.about);
