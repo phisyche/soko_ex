@@ -4,9 +4,11 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
-    link(rel='stylesheet', href='/bootstrap/css/usebootstrap.css')
+    link(rel='stylesheet', href='/bootstrap/css/usebootstrap.less')
     link(rel='stylesheet', href='/stylesheets/style.css')
-
+    link(rel='stylesheet', href='/stylesheets/account.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/form.css')
   body
   .navbar.navbar-default
     .navbar-header
@@ -15,11 +17,12 @@ html
         span.icon-bar
         span.icon-bar
       a(href='/')  
-        img(src='images/logo.png')
+        img(src='/images/logo.png')
     .navbar-collapse.collapse.navbar-responsive-collapse
       ul.nav.navbar-nav
       form.navbar-form.navbar-left
-        input.form-control.col-lg-8(type='text', placeholder='Search')
+        input.form-cont
+        rol.col-lg-8(type='text', placeholder='Search')
       ul.nav.navbar-nav.navbar-right
         li
           a(href='/blog/') Blog

@@ -16,6 +16,9 @@ router.get('/account/profile', ctrlAccounts.myprofile);
 router.get('/account/inbox', ctrlAccounts.messages);
 router.get('/account/login', ctrlAccounts.login);
 router.get('/account/create', ctrlAccounts.register);
+router.get('/account/settings', ctrlAccounts.settings);
+router.get('/account/favourites', ctrlAccounts.favourites);
+
 
 /* Other pages */
 router.get('/about', ctrlOthers.about);
