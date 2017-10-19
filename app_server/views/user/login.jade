@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  .page_body
+    .container
+      .Absolute-Center.is-Responsive
+        #logo-container.text-center
+          img(src='/images/logo.png')
+        .col-sm-12.col-md-10.col-md-offset-1
+          form#loginForm(action='',method='post')
+            .form-group.input-group
+              span.input-group-addon
+                i.glyphicon.glyphicon-user
+              input.form-control(type='text', name='username', placeholder='username')
+            .form-group.input-group
+              span.input-group-addon
+                i.glyphicon.glyphicon-lock
+              input.form-control(type='password', name='password', placeholder='password')
+            .form-group
+              button.btn.btn-def.btn-block(type='submit') Login
+            .form-group.text-center
+              a(href='#') Forgot Password
+              |  
+              a(href='#') Support
