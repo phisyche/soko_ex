@@ -6,7 +6,7 @@ mongoose.Promise =require('bluebird');
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({	
+const userSchema = new Schema({
 		username: { type: String,required: true, index: { unique: true, sparse: true }},
 		names: String,
 		phone: String,

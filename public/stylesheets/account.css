@@ -12,9 +12,6 @@ body {
 	width: 0;
 	clear: both;
 }
-.admin-panel {
-	width: 990px;
-}
 /*slidebar侧边栏*/
 .slidebar {
 	width: 16%;
@@ -70,6 +67,7 @@ body {
 .main {
 	float: left;
 	height: 690px;
+  width: 84%;
 	background-color: rgb(255,255,255);
 	position: relative;
 	font-family: helvetica,verdana,sans-serif;

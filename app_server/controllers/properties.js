@@ -10,5 +10,5 @@ res.render('property_info', { title: 'Properties in Kenya' });
 
 /* GET 'Add review' page */
 module.exports.addProperty = function(req, res){
-res.render('index', { title: 'Add Property' });
+res.render('add_property-form', { title: 'Add Property' });
 };

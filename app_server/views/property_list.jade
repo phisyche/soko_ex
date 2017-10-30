@@ -2,29 +2,12 @@ extends layout
 
 block content
   .jumbotron.specialjum
-    h1 Buy and Rent Property in Kenya
-    p
-      | Search for properties across Kenya
-    p
-      a.btn.btn-primary.btn-lg Learn more
-  .container
-    .col-md-12
-      .col-md-4
-        img(src="")
-        h2 Bungalow in Karen
-      .col-md-4
-        img(src="")
-        h2 Mansionntte in Kitusuru
-      .col-md-4
-        img(src="")
-        h2 Apartments in Westlands
-    .col-md-12
-      .col-md-4
-        img(src="")
-        h2 Bungalow in Karen
-      .col-md-4
-        img(src="")
-        h2 Mansionntte in Kitusuru
-      .col-md-4
-        img(src="")
-        h2 Apartments in Westlands
+    .featurette
+      .featurette-inner.text-center
+        form.search(role='form')
+          h3.no-margin-top.h1 Buy and Rent Property in Kenya
+          .input-group.input-group-lg
+            input.form-control(type='search', placeholder='City, County')
+            span.input-group-btn
+              button.btn.btn-info(type='button')
+                i.glyphicon.glyphicon-search
