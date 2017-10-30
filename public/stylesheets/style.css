@@ -65,9 +65,10 @@ div.well{
 }
 .jumbotron {
   background-image: url("/images/house_banner.jpg");
+  padding-left: 0px;
 }
 
-.jumbotron .h1 {
-  font-size: 38px;
+.jumbotron .specialjum .h3 {
+  font-size: 45px;
   color: white;
 }

@@ -1,13 +1,66 @@
 extends layout
 
 block content
+  link(href='/bootstrap/css/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+  script(src='/javascripts/jquery.min.js')
+  script(src='javascripts/scripts.js')
+  link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  script(src='javascripts/responsiveslides.min.js')
+  script.
+    $(function () {
+    $("#slider").responsiveSlides({
+    auto: true,
+    speed: 500,
+    namespace: "callbacks",
+    pager: true,
+    });
+    });
   .jumbotron.specialjum
     .featurette
       .featurette-inner.text-center
         form.search(role='form')
-          h3.no-margin-top.h1 Buy and Rent Property in Kenya
+          h3 Buy and Rent Property in Kenya
           .input-group.input-group-lg
             input.form-control(type='search', placeholder='City, County')
             span.input-group-btn
               button.btn.btn-info(type='button')
                 i.glyphicon.glyphicon-search
+  .banner-bottom-top
+    .container
+      .bottom-header
+        .header-bottom
+          .bottom-head
+            a(href='buy.html')
+              .buy-media
+                i.buy  
+                h6 Buy
+          .bottom-head
+            a(href='buy.html')
+              .buy-media
+                i.rent  
+                h6 Rent
+          .bottom-head
+            a(href='buy.html')
+              .buy-media
+                i.sell  
+                h6 Land
+          .bottom-head
+            a(href='loan.html')
+              .buy-media
+                i.loan  
+                h6 Commercial
+          .bottom-head
+            a(href='buy.html')
+              .buy-media
+                i.apart  
+                h6 Projects
+          .bottom-head
+            a(href='dealers.html')
+              .buy-media
+                i.deal  
+                h6 Dealers
+          .clearfix  
