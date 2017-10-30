@@ -3723,9 +3723,6 @@ ul.pagination {
   padding: 1em 0 0;
 }
 /*--typo--*/
-button.btn.btn-lg {
-  font-size: 1.1em;
-}
 h1.grid2 {
   font-size: 2em;
 }
@@ -4096,18 +4093,6 @@ ul.loan-col1 li.loan-list-top {
 /*--typo--*/
 .page-header h3 {
   font-size: 2em;
-}
-button.btn.btn-lg {
-  font-size: 1em;
-  padding: 7px;
-}
-button.btn.btn-1 {
-  font-size: 0.9em;
-  padding: 8px;
-}
-button.btn.btn-sm {
-  font-size: 0.8em;
-  padding: 9px;
 }
 h1#h1-bootstrap-heading {
   font-size: 2.2em;
@@ -4893,26 +4878,11 @@ h2#h2-bootstrap-heading {
 h3#h3-bootstrap-heading {
   font-size: 1.3em;
 }
-button.btn.btn-lg {
-  font-size: 0.9em;
-  margin: 0 0 0.5em 0px;
-  padding: 9px;
-}
+
 .grid1 {
   margin: 0.7em 0 0;
 }
-button.btn.btn-1 {
-  font-size: 0.8em;
-  margin: 0 0 0.5em;
-}
-button.btn.btn-sm {
-  font-size: 0.7em;
-  padding: 5px;
-  margin: 0 0 0.5em;
-}
-button.btn.btn-xs {
-  font-size: 0.7em;
-}
+
 ul.nav.nav-pills a{
 	padding: 0.5em;
   font-size: 0.9em;

@@ -10,7 +10,7 @@ html, body {
 }
 .navbar-default {
   padding-top: 10px;
-  height: 70px;
+  height: 75px;
 }
 .navbar-default img {
   padding-top: 8px;
@@ -33,7 +33,7 @@ html, body {
 .jumbotron {
   width: 100%;
   padding-left: 50px;
-  height: 450px;
+  height: 390px;
 }
 div.well{
   height: 250px;
