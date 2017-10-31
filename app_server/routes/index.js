@@ -4,7 +4,7 @@ var ctrlProperties = require('../controllers/properties');
 var ctrlOthers = require('../controllers/others');
 var ctrlAccounts = require('../controllers/accounts');
 
-
+router.get('/', ctrlProperties.homelist);
 
 /* Accounts pages */
 router.get('/account', ctrlAccounts.overview);

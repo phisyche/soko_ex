@@ -17,7 +17,6 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 var cpUpload = upload.fields([{ name: 'photo', maxCount: 1 }, { name: 'menu', maxCount: 1 }, { name: 'gallery', maxCount: 10 }])
 /* Properties pages */
-router.get('/', ctrlProperties.homelist);
 router.get('/property', ctrlProperties.propertyInfo);
 router.get('/new', ctrlProperties.addProperty);
 router.post('/new', cpUpload, ctrlProperties.postProperty);
