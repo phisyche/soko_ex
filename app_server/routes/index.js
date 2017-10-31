@@ -4,10 +4,7 @@ var ctrlProperties = require('../controllers/properties');
 var ctrlOthers = require('../controllers/others');
 var ctrlAccounts = require('../controllers/accounts');
 
-/* Properties pages */
-router.get('/', ctrlProperties.homelist);
-router.get('/property', ctrlProperties.propertyInfo);
-router.get('/property/new', ctrlProperties.addProperty);
+
 
 /* Accounts pages */
 router.get('/account', ctrlAccounts.overview);

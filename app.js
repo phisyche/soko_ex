@@ -16,6 +16,7 @@ var bcrypt = require('bcryptjs');
 
 var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
+var property = require('./app_server/routes/property');
 var User = require('./app_server/models/userModel');
 
 const mongoose = require('mongoose');
@@ -112,6 +113,7 @@ app.use(function(req, res, next){
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/property', property);
 
 
 app.get('/logout', function(req, res){

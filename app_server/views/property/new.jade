@@ -1,0 +1,47 @@
+extends ../layout
+
+block content
+  .page_body
+    .container
+      .col-md-offset-3.col-md-6.col-md-offset-3
+          h3.text-center Add Property 
+      .col-md-offset-0.col-md-12.col-md-offset-0
+        form.form-horizontal(method="post",action="/property/new",enctype="multipart/form-data")
+          .form-group
+            .col-sm-12
+              input#name.form-control(type='text', name='name', placeholder='Name')
+          .form-group
+            .col-sm-12
+              textarea#description.form-control(name='description')
+          .form-group
+            .col-sm-12
+              input#city.form-control(type='text', name='city', placeholder='City')
+          .form-group
+            .col-sm-12
+              input#map.form-control(type='text', name='map', placeholder='map')
+          .form-group
+            .col-sm-12
+              select.selectpicker.form-control(name='listtype', data-selected-text-format='count > 5')
+                option(value='sale') For Sale
+                option(value='rent') For Rent
+          .form-group
+            .col-sm-12
+              select.selectpicker.form-control(name='category', data-selected-text-format='count > 4')
+                option(data-icon='glyphicon glyphicon-signal', value='apartment') Apartment
+                option(data-icon='glyphicon-credit-card', value='house') House
+                option(data-icon='glyphicon-cutlery', value='land') Land
+                option(data-icon='glyphicon glyphicon-glass', value='commercial') Commercial
+                option(data-icon='glyphicon-gift', value='developments') Developments          
+          .form-group
+            .col-sm-4
+              label(for='photo') Cover Photo
+            .col-sm-8
+              input#photo.form-control(type='file', name='photo', placeholder='photo')
+          .form-group
+            .col-sm-4
+              label(for='gallery') Gallery
+            .col-sm-8
+              input#gallery.form-control(type='file', name='gallery', placeholder='gallery', multiple='')
+          .form-group
+            .row
+              button.button.btn.btn-warning.form-control(type='submit') Create
