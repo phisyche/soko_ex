@@ -5,7 +5,11 @@ var slug = require('slug');
 var propertyModel = require(__dirname + '/../models/Property');
 
 module.exports.homelist = function(req, res){
-res.render('property_list', { title: 'Home' });
+	propertyModel.find({}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'Home', propertys: data, });
+    });
+	
 };
 
 /* GET 'Property info' page */
@@ -25,6 +29,7 @@ module.exports.postProperty = function(req, res){
 	instance.photo = req.files['photo'][0].filename;
 	instance.map = req.body.map;
 	instance.city = req.body.city;
+	instance.price = req.body.price;
 	instance.description = req.body.description;
 	instance.listType = req.body.listtype;
 	instance.category = req.body.category;
@@ -34,3 +39,19 @@ module.exports.postProperty = function(req, res){
 	});
 	res.redirect('/property/new');
 }
+
+module.exports.forsale = function(req, res){
+	propertyModel.find({listType: 'sale'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'For Sale', propertys: data, });
+    });
+	
+};
+
+module.exports.forrent = function(req, res){
+	propertyModel.find({listType: 'rent'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'For Rent', propertys: data, });
+    });
+	
+};

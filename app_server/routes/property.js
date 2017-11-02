@@ -21,4 +21,8 @@ router.get('/property', ctrlProperties.propertyInfo);
 router.get('/new', ctrlProperties.addProperty);
 router.post('/new', cpUpload, ctrlProperties.postProperty);
 
+//CATEGORIES FOR DIFFERENT OPTIONS
+router.get('/for_sale', ctrlProperties.forsale);
+router.get('/for_rent', ctrlProperties.forrent);
+
 module.exports = router;
