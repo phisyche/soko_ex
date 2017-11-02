@@ -22,6 +22,13 @@ module.exports.addProperty = function(req, res){
 res.render('property/new', { title: 'Add Property' });
 };
 
+module.exports.fetchProperty = function(req,res, next){
+	propertyModel.findOne({slug: req.params.name}, function(err, data){
+		if(err) throw err;
+		res.render("property/show",{ property: data, title: data.name});
+	})
+};
+
 module.exports.postProperty = function(req, res){
 	var instance = new propertyModel();
 	instance.name = req.body.name
