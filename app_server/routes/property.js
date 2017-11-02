@@ -22,10 +22,12 @@ var cpUpload = upload.fields([{ name: 'photo', maxCount: 1 }, { name: 'menu', ma
 router.get('/property', ctrlProperties.propertyInfo);
 router.get('/new', roles.auth, ctrlProperties.addProperty);
 router.post('/new',roles.auth , cpUpload, ctrlProperties.postProperty);
-router.get('/:name', ctrlProperties.fetchProperty);
 
 //CATEGORIES FOR DIFFERENT OPTIONS
 router.get('/for_sale', ctrlProperties.forsale);
 router.get('/for_rent', ctrlProperties.forrent);
+
+router.get('/:name', ctrlProperties.fetchProperty);
+
 
 module.exports = router;
