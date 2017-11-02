@@ -9,30 +9,37 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
-  .navbar.navbar-default
-    .navbar-header
-      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a(href='/')  
-        img(src='/images/logo.png')
-    .navbar-collapse.collapse.navbar-responsive-collapse
-      ul.nav.navbar-nav
-      ul.nav.navbar-nav.navbar-right
-        li
-          a(href='/blog/') Blog
-        if user
+    .navbar.navbar-default
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href='/')  
+          img(src='/images/logo.png')
+      .navbar-collapse.collapse.navbar-responsive-collapse
+        ul.nav.navbar-nav
+        ul.nav.navbar-nav.navbar-right
           li
-            a(href='#') Welcome 
-              = user.names
-        else
+            a(href='/blog/') Blog
+          if user
+            li
+              a(href='#') Welcome 
+                = user.names
+          else
+            li
+              a(href='/login/') Login/Register
           li
-            a(href='/login/') Login/Register
-        li
-          a(href='/property/new')
-            button.btn.btn-info(type='button') ADD PROPERTY +
+            a(href='/property/new')
+              button.btn.btn-info(type='button') ADD PROPERTY +
     block content
+    footer
+      .row
+        .col-xs-12
+          p
+            | Copyright © 
+            a(href='/') Sokoestate
+            | 2017
       if errors
         each error in errors
           .alert.alert-danger=error.msg
@@ -44,10 +51,6 @@ html
           .alert alert-danger=error_msg
         if error    
           .alert.alert-danger=error
-    footer
-      .row
-        .col-xs-12
-          small &copy; Sokoestate 2017 All Rights Reserved.
   script(src='/javascripts/jquery-3.2.1.js')
   script(src='/bootstrap/js/bootstrap.min.js')
   script(src='/javascripts/usebootstrap.js')

@@ -24,6 +24,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   	background-color: #27da93;
   	  padding: 0.8em 0;
 }
+.pagination {
+  text-align: center;
+}
 .bottom-head {
 	text-align: center;
   	border-right:1px solid #EBEBEB;
@@ -34,6 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 .banner-bottom-top {
   	background-color: #F7F7F7;
   	min-height: 96px;
+    margin-bottom: 30px;
 }
 .bottom-head:nth-child(7) {
 	border-right: none;
@@ -97,7 +101,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   	left: 0;
 }
 .bottom-head a:hover .buy-media h6{
-	color: #05B8CC;
+	color: #27da93;
 }
 i.buy{
 	width: 32px;
@@ -384,29 +388,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   	z-index: 999;
   	right: 10%;
 }
-.caption{
-	position: absolute;
-	top: 43%;
-  	left: 13%;
-}
-.caption h3{
-	color: #fff;
-	font-size: 3em;
-  	text-transform: uppercase;
-  	display: inline-block;
-  	font-family: 'Montserrat-Regular';
-  	padding: 0 0 0.3em;
-}
-.caption h3 span{
-	border-bottom: 7px solid #27DA93;
-}
-.caption p{
-	color: rgb(19, 9, 9);
-  font-size: 18px;
-  font-weight: bold;
-	font-size: 1.7em;
-	margin: 0.5em 0em 0;
-}
+
 .banner1{
 	background: url(../images/house.jpg) no-repeat;
 	width:100%;
@@ -3188,6 +3170,7 @@ select.drop-select1 {
 }
 .banner-bottom-top {
   min-height: 81px;
+  margin-bottom: 30px;
 }
 .bottom-head a:hover .buy-media {
   height: 140px;
@@ -4512,9 +4495,6 @@ p.para-in {
 }
 .blog-text {
   width: 66%;
-}
-nav ul.pagination li a {
-  padding: 6px 10px !important;
 }
 .single-grid h5, .leave h5 {
   margin-bottom: 0.5em;
