@@ -1,7 +1,6 @@
 /* GET 'home' page */
 var slug = require('slug');
 
-
 var propertyModel = require(__dirname + '/../models/Property');
 
 module.exports.homelist = function(req, res){
@@ -41,10 +40,12 @@ module.exports.postProperty = function(req, res){
 	instance.listType = req.body.listtype;
 	instance.category = req.body.category;
 	instance.gallery = req.files['gallery'];
+	instance.user_id = res.locals.user.username;
 	instance.save(function(err){
-		console.log(err)
+		if(err)
+			res.render('property/new');
+		res.redirect('/property/new');
 	});
-	res.redirect('/property/new');
 }
 
 module.exports.forsale = function(req, res){

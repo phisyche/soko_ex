@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
 var mime = require('mime');
+var roles = require(__dirname + '/../config/roles');
+
 var ctrlProperties = require('../controllers/properties');
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -18,8 +20,8 @@ var upload = multer({ storage: storage });
 var cpUpload = upload.fields([{ name: 'photo', maxCount: 1 }, { name: 'menu', maxCount: 1 }, { name: 'gallery', maxCount: 10 }])
 /* Properties pages */
 router.get('/property', ctrlProperties.propertyInfo);
-router.get('/new', ctrlProperties.addProperty);
-router.post('/new', cpUpload, ctrlProperties.postProperty);
+router.get('/new', roles.auth, ctrlProperties.addProperty);
+router.post('/new',roles.auth , cpUpload, ctrlProperties.postProperty);
 router.get('/:name', ctrlProperties.fetchProperty);
 
 //CATEGORIES FOR DIFFERENT OPTIONS

@@ -1,5 +1,6 @@
 /* GET 'my account' page */
 var bcrypt = require('bcryptjs');
+var slug = require('slug');
 var User = require('../models/userModel');
 
 module.exports.overview = function(req, res){
@@ -67,8 +68,9 @@ module.exports.registerPost = function(req, res){
 
     console.log(req.body.password+' . '+ req.body.names+' . '+ hash);
     User.create({
-    	username: phone,
-    	names: names,
+        id: slug(names),
+    	  username: phone,
+    	  names: names,
         password: hash,
         phone: phone,
         role: role,
@@ -77,7 +79,7 @@ module.exports.registerPost = function(req, res){
 	  	res.json(err);
 	  	return handleError(err);
 	  }else{
-	  	res.json(small);
+	  	res.redirect('/login');
 	  }
 	  // saved!
 	});
