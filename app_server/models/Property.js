@@ -15,6 +15,7 @@ const propertySchema = new Schema({
 			type: String,
 			unique: true
 		},
+		price: String,
 		photo: String,
 		listType: String,
 		category: String,
