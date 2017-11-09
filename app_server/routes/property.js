@@ -26,6 +26,11 @@ router.post('/new',roles.auth , cpUpload, ctrlProperties.postProperty);
 //CATEGORIES FOR DIFFERENT OPTIONS
 router.get('/for_sale', ctrlProperties.forsale);
 router.get('/for_rent', ctrlProperties.forrent);
+router.get('/land', ctrlProperties.land);
+router.get('/commercial', ctrlProperties.commercial);
+router.get('/projects', ctrlProperties.projects);
+router.get('/dealers', ctrlProperties.dealers);
+router.get('/hostels', ctrlProperties.hostels);
 
 router.get('/:name', ctrlProperties.fetchProperty);
 

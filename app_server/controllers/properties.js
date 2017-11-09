@@ -8,7 +8,7 @@ module.exports.homelist = function(req, res){
 		if(err) throw err;
         res.render('property/property_list', { title: 'Home', propertys: data, });
     });
-	
+
 };
 
 /* GET 'Property info' page */
@@ -24,7 +24,8 @@ res.render('property/new', { title: 'Add Property' });
 module.exports.fetchProperty = function(req,res, next){
 	propertyModel.findOne({slug: req.params.name}, function(err, data){
 		if(err) throw err;
-		res.render("property/show",{ property: data, title: data.name});
+		console.log(data);
+		res.render("property/product",{ property: data, title: data.name});
 	})
 };
 
@@ -53,7 +54,7 @@ module.exports.forsale = function(req, res){
 		if(err) throw err;
         res.render('property/property_list', { title: 'For Sale', propertys: data, });
     });
-	
+
 };
 
 module.exports.forrent = function(req, res){
@@ -61,5 +62,45 @@ module.exports.forrent = function(req, res){
 		if(err) throw err;
         res.render('property/property_list', { title: 'For Rent', propertys: data, });
     });
-	
+
+};
+
+module.exports.land = function(req, res){
+	propertyModel.find({listType: 'land'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'Land', propertys: data, });
+    });
+
+};
+
+module.exports.commercial = function(req, res){
+	propertyModel.find({listType: 'commercial'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'Commercial', propertys: data, });
+    });
+
+};
+
+module.exports.projects = function(req, res){
+	propertyModel.find({listType: 'projects'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'Projects', propertys: data, });
+    });
+
+};
+
+module.exports.dealers = function(req, res){
+	propertyModel.find({listType: 'dealers'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'Dealers', propertys: data, });
+    });
+
+};
+
+module.exports.hostels = function(req, res){
+	propertyModel.find({listType: 'hostels'}, function(err, data){
+		if(err) throw err;
+        res.render('property/property_list', { title: 'Hostels', propertys: data, });
+    });
+
 };

@@ -4,7 +4,6 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
-    link(rel='stylesheet', href='/bootstrap/css/usebootstrap.less')
     link(rel='stylesheet', href='/stylesheets/account.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
 
@@ -23,9 +22,19 @@ html
           li
             a(href='/blog/') Blog
           if user
-            li
-              a(href='#') Welcome 
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown') Welcome 
                 = user.names
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Profile
+                li
+                  a(href='#') Settings
+                li
+                  a(href='#') Log out
+
+
           else
             li
               a(href='/login/') Login/Register

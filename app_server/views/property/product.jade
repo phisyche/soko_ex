@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .container
+    .col-md-12
+      .thumbnail
+        .row
+          .col-sm-6
+            img.img-responsive(src="/uploads/"+property.photo width="100%" alt='')
+            .thumbnails.row
+              each image in property.gallery
+                .col-xs-3
+                  a(href='/property/#{property.slug}')
+                    img.img-thumbnail.img-responsive(src='/uploads/'+image.filename, width="100%" alt='')
+          .col-sm-6
+            h4.pull-right Ksh: #{property.price}
+            h4
+              a(href='/property/#{property.slug}')
+                sup
+                =property.name
+            p
+              =property.description

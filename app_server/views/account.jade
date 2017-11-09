@@ -1,3 +1,97 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/account.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    .navbar.navbar-default
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href='/')  
+          img(src='/images/logo.png')
+      .navbar-collapse.collapse.navbar-responsive-collapse
+        ul.nav.navbar-nav
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='/blog/') Blog
+          if user
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown') Welcome 
+                = user.names
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Profile
+                li
+                  a(href='#') Settings
+                li
+                  a(href='#') Log out
+
+
+          else
+            li
+              a(href='/login/') Login/Register
+          li
+            a(href='/property/new')
+              button.btn.btn-info(type='button') ADD PROPERTY +
+      .admin-panel.clearfix
+        .slidebar
+          .logo
+            img(src='/images/user.png', height='140px', width='140px')
+          ul
+            li
+              a#targeted(href='/account') Overview
+            li
+              a(href='/account/profile') Profile
+            li
+              a(href='/account/mylisting') Listings
+            li
+              a(href='/account/messages') Messages
+            li
+              a(href='/account/favourites') Favourites
+            li
+              a(href='/account/settings') Settings
+
+      
+      
+    block content
+    footer
+      .row
+        .col-xs-12
+          p
+            | Copyright © 
+            a(href='/') Sokoestate
+            | 2017
+      if errors
+        each error in errors
+          .alert.alert-danger=error.msg
+        if message    
+          .alert.alert-info=message
+        if success_msg     
+          .alert.alert-success=success_msg
+        if error_msg     
+          .alert alert-danger=error_msg
+        if error    
+          .alert.alert-danger=error
+  script(src='/javascripts/jquery-3.2.1.js')
+  script(src='/bootstrap/js/bootstrap.min.js')
+  script(src='/javascripts/usebootstrap.js')
+
+
+
+
+
+
+
+
+
 extends layout
 
 block content
@@ -18,8 +112,3 @@ block content
           a(href='/account/favourites') Favourites
         li
           a(href='/account/settings') Settings
-    .main
-      ul.breadcrumb(style='margin-bottom: 5px;')
-        li
-          a(href='#') My Account
-        li.active Profile

@@ -44,27 +44,27 @@ block content
                 i.rent  
                 h6 Rent
           .bottom-head
-            a(href='buy.html')
+            a(href='/property/land')
               .buy-media
                 i.sell  
                 h6 Land
           .bottom-head
-            a(href='loan.html')
+            a(href='/property/commercial')
               .buy-media
                 i.loan  
                 h6 Commercial
           .bottom-head
-            a(href='buy.html')
+            a(href='/property/projects')
               .buy-media
                 i.apart  
                 h6 Projects
           .bottom-head
-            a(href='dealers.html')
+            a(href='/property/dealers')
               .buy-media
                 i.deal  
                 h6 Dealers
           .bottom-head
-            a(href='buy.html')
+            a(href='/property/hostels')
               .buy-media
                 i.pg  
                 h6 Hostels
@@ -73,28 +73,28 @@ block content
     .row-fluid
       each property in propertys
         .col-sm-6.col-md-4
-          .thumbnail
-            img(src="/uploads/"+ property.photo, width="100%", alt='')
-            .add-to-cart
-              a.glyphicon.glyphicon-plus-sign(href='#', data-toggle='tooltip', data-placement='top', title='Add to cart')
-            .caption
-              h4.pull-right Ksh: #{property.price}
-              h4
-                a(href='product.html')
-                  | 1
-                  sup st
-                  =property.name
-              p
-                =property.description
-              .ratings
-                p.pull-right
-                  a(href='product.html#comments') 15 reviews
+          a(href='/property/#{property.slug}')
+            .thumbnail
+              img(src="/uploads/"+ property.photo, width="100%", alt='')
+              .add-to-cart
+                a.glyphicon.glyphicon-plus-sign(href='#', data-toggle='tooltip', data-placement='top', title='Add to cart')
+              .caption
+                h4.pull-right Ksh: #{property.price}
+                h4
+                  a(href='/property/#{property.slug}')
+                    sup
+                    =property.name
                 p
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
-                  span.glyphicon.glyphicon-star
+                  =property.description
+                .ratings
+                  p.pull-right
+                    a(href='product.html#comments') 15 reviews
+                  p
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
     .row-fluid  
       .text-center
         ul.pagination
