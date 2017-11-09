@@ -18,6 +18,7 @@ var bcrypt = require('bcryptjs');
 var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
 var property = require('./app_server/routes/property');
+var admin = require('./app_server/routes/admin');
 var User = require('./app_server/models/userModel');
 
 const mongoose = require('mongoose');
@@ -115,6 +116,7 @@ app.use(function(req, res, next){
 app.use('/', index);
 app.use('/users', users);
 app.use('/property', property);
+app.use('/admin', admin);
 
 
 app.get('/logout', function(req, res){
@@ -136,7 +138,7 @@ app.get('/test',function(req, res){
 });
 
 
-app.post('/login', passport.authenticate('local', { successRedirect: '/',
+app.post('/login', passport.authenticate('local', { successRedirect: '/dashboard',
                                    failureRedirect: '/login',
                                    failureFlash: true })
   , function(req, res){

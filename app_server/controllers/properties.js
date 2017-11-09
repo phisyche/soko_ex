@@ -104,3 +104,11 @@ module.exports.hostels = function(req, res){
     });
 
 };
+
+module.exports.allProperty = function(req, res){
+	propertyModel.find({}, function(err, data){
+		if(err) throw err;
+        res.render('admin/property/property_list', { title: 'All Property', propertys: data, });
+    });
+
+};

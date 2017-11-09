@@ -1,0 +1,67 @@
+extends ../../layout
+
+block content
+  link(href='/bootstrap/css/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+  script(src='/javascripts/jquery.min.js')
+  script(src='javascripts/scripts.js')
+  link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  script(src='javascripts/responsiveslides.min.js')
+  script.
+    $(function () {
+    $("#slider").responsiveSlides({
+    auto: true,
+    speed: 500,
+    namespace: "callbacks",
+    pager: true,
+    });
+    });    
+  .container
+    .row-fluid
+      each property in propertys
+        .col-sm-12.col-md-12
+          a(href='/property/#{property.slug}')
+            .thumbnail
+              .row
+                .col-md-4
+                  img(src="/uploads/"+ property.photo, width="100%", alt='')
+                .col-md-8
+                  .caption
+                    h4.pull-right Ksh: #{property.price}
+                    h4
+                      a(href='/property/#{property.slug}')
+                        sup
+                        =property.name
+                    p
+                      =property.description
+                    .ratings
+                      p.pull-right
+                        a(href='product.html#comments') 15 reviews
+                      p
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+    .row-fluid  
+      .text-center
+        ul.pagination
+          li.disabled
+            a(href='#') «
+          li.active
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#') »
+
+script(src='/bootstrap/js/bootstrap.js')

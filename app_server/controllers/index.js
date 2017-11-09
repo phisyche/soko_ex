@@ -1,4 +1,6 @@
-/* GET home page */
+var slug = require('slug');
+var propertyModel = require(__dirname + '/../models/Property');
+
 module.exports.index = function(req, res){
 res.render('index', { title: 'SokoEstate' });
 };
@@ -11,4 +13,11 @@ res.render('index', { title: 'About' });
 /* GET home page */
 module.exports.blog = function(req, res){
 res.render('index', { title: 'Property Forum' });
+};
+
+/* GET home page */
+module.exports.dashboard = function(req, res){
+	if(res.locals.user.role == '1')
+		res.render('admin/index', { title: 'Admin Dashboard' });
+	res.render('admin/index', { title: 'User Dashboard' });
 };

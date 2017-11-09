@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var ctrlProperties = require('../controllers/properties');
-var ctrlOthers = require('../controllers/others');
+var ctrlIndex = require('../controllers/index');
 var ctrlAccounts = require('../controllers/accounts');
+var roles = require(__dirname + '/../config/roles');
 
 /* Properties pages */
 router.get('/', ctrlProperties.homelist);
@@ -20,8 +21,11 @@ router.get('/login', ctrlAccounts.login);
 router.get('/register', ctrlAccounts.register);
 router.post('/register', ctrlAccounts.registerPost);
 
+/* Dashboard */
+router.get('/dashboard', roles.auth ,ctrlIndex.dashboard);
+
 /* Other pages */
-router.get('/about', ctrlOthers.about);
-router.get('/blog', ctrlOthers.blog);
+router.get('/about', ctrlIndex.about);
+router.get('/blog', ctrlIndex.blog);
 
 module.exports = router;

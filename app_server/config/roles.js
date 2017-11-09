@@ -18,7 +18,7 @@ function ensureAdmin(req, res, next){
 		}		
 	}else{
 		req.flash('error_msg','You must be logged in');
-		res.redirect('/');
+		res.redirect('/login');
 	}
 }
 
