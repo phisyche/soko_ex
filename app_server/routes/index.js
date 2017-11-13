@@ -18,7 +18,7 @@ router.post('/register', ctrlAccounts.registerPost);
 /* Dashboard */
 router.get('/dashboard', roles.auth, ctrlIndex.dashboard);
 router.get('/dashboard/profile', roles.auth, ctrlIndex.profile);
-router.get('/dashboard/mylistings', roles.auth, ctrlIndex.mylisting);
+router.get('/dashboard/mylistings', roles.auth, ctrlIndex.listing);
 router.get('/dashboard/favourites', roles.auth, ctrlIndex.favourites);
 
 /* Other pages */

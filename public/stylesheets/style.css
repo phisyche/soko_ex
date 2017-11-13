@@ -38,7 +38,9 @@ html, body {
 div.well{
   height: 250px;
 }
-
+footer {
+  text-align: center;
+}
 .Absolute-Center {
   margin: auto; left: 0; bottom: 0; right: 0;
 }
