@@ -20,3 +20,13 @@ block content
                 =property.name
             p
               !{property.description}
+              #map(style='width:450px;height:300px;background:yellow')
+              script.
+                function myMap() {
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {
+                center: new google.maps.LatLng(0, 40), zoom: 10
+                };
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                }
+              script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap')
