@@ -23,9 +23,17 @@ html
           li
             a(href='/blog/') Blog
           if user
-            li
-              a(href='#') Welcome 
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown') 
                 = user.names
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/dashboard') Dashboard
+                li
+                  a(href='#') Settings
+                li
+                  a(href='#') Log out
           else
             li
               a(href='/login/') Login/Register

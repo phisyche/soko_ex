@@ -333,6 +333,9 @@ h2.resp-accordion:hover{
 .slider {
 	position: relative;
 }
+footer {
+  text-align: center;
+}
 .rslides {
 	  position: relative;
 	  list-style: none;
@@ -2471,6 +2474,7 @@ ul.blog-links li a i{
 }
 ul.pagination {
   border-radius: 0 !important;
+  text-align: center;
 }
 .pagination > .active > a,.pagination > .active > a:hover {
   background-color: #27da93;

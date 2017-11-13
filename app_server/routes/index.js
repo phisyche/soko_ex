@@ -8,21 +8,18 @@ var roles = require(__dirname + '/../config/roles');
 /* Properties pages */
 router.get('/', ctrlProperties.homelist);
 router.get('/property', ctrlProperties.propertyInfo);
-router.get('/property/new', ctrlProperties.addProperty);
+router.get('/property/new', roles.auth, ctrlProperties.addProperty);
 
 /* Accounts pages */
-router.get('/account', ctrlAccounts.overview);
-router.get('/account/mylisting', ctrlAccounts.mylisting);
-router.get('/account/profile', ctrlAccounts.myprofile);
-router.get('/account/messages', ctrlAccounts.messages);
-router.get('/account/settings', ctrlAccounts.settings);
-router.get('/account/favourites', ctrlAccounts.favourites);
 router.get('/login', ctrlAccounts.login);
 router.get('/register', ctrlAccounts.register);
 router.post('/register', ctrlAccounts.registerPost);
 
 /* Dashboard */
-router.get('/dashboard', roles.auth ,ctrlIndex.dashboard);
+router.get('/dashboard', roles.auth, ctrlIndex.dashboard);
+router.get('/dashboard/profile', roles.auth, ctrlIndex.profile);
+router.get('/dashboard/mylistings', roles.auth, ctrlIndex.mylisting);
+router.get('/dashboard/favourites', roles.auth, ctrlIndex.favourites);
 
 /* Other pages */
 router.get('/about', ctrlIndex.about);
