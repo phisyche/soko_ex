@@ -1,6 +1,10 @@
-extends dashboard
+extends dashboard_layout
 
-.page_body
-  h1 My Listings
-  block content
-  
+block content
+  .page_body
+    .row
+      .col-sm-9
+        h1 My Listings
+      .col-sm-3
+        button.btn.btn-info Add Listings
+    

@@ -127,10 +127,14 @@ html(lang='en')
         //li.breadcrumb-item.active My Dashboard
       // /.container-fluid
       // /.content-wrapper
+      block content
       footer.sticky-footer
         .container
           .text-center
-            small Copyright © Your Website 2017
+            p
+              | Copyright © 
+              a(href='/') Sokoestate 
+              | 2017
       // Scroll to Top Button
       a.scroll-to-top.rounded(href='#page-top')
         i.fa.fa-angle-up
@@ -157,3 +161,4 @@ html(lang='en')
       // Custom scripts for all pages
       // Custom scripts for this page
       script(src='javascripts/admin/sb-admin-datatables.min.js')
+      

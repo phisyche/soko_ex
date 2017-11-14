@@ -27,9 +27,9 @@ res.render('layouts/my_listing', { title: 'My Listings' });
 };
 
 module.exports.profile = function(req, res){
-res.render('layouts/dashboard', { title: 'My Profile' });
+res.render('layouts/dashboard_layout', { title: 'My Profile' });
 };
 
 module.exports.favourites = function(req, res){
-res.render('layouts/dashboard', { title: 'My Favourites' });
+res.render('layouts/dashboard_layout', { title: 'My Favourites' });
 };
