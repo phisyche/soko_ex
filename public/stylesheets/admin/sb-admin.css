@@ -18,9 +18,16 @@ body.sticky-footer {
 body.fixed-nav {
   padding-top: 56px; }
 
+.list_head {
+  font-weight: bold;
+}
 .content-wrapper {
   min-height: calc(100vh - 56px);
   padding-top: 1rem; }
+
+  .listing_table {
+    margin-top: 10px;
+  }
 
 .scroll-to-top {
   position: fixed;

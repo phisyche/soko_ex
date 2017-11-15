@@ -44,7 +44,6 @@ footer {
 .Absolute-Center {
   margin: auto; left: 0; bottom: 0; right: 0;
 }
-
 .Absolute-Center.is-Responsive {
   width: 50%;
   height: 50%;
