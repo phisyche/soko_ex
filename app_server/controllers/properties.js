@@ -37,6 +37,7 @@ module.exports.postProperty = function(req, res){
 	instance.map = req.body.map;
 	instance.city = req.body.city;
 	instance.price = req.body.price;
+	instance.features = req.body.features;
 	instance.description = req.body.description;
 	instance.listType = req.body.listtype;
 	instance.category = req.body.category;

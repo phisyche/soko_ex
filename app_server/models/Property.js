@@ -19,6 +19,7 @@ const propertySchema = new Schema({
 		photo: String,
 		listType: String,
 		category: String,
+		features: Array,
 		gallery: Array
 
 });
