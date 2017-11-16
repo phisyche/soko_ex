@@ -1,10 +1,29 @@
 extends dashboard_layout
 
 block content
-  .page_body
+  .container
     .row
       .col-sm-9
-        h1 My Listings
+        h3.list_head My Listings
       .col-sm-3
-        button.btn.btn-info Add Listings
-    
+        a(href='/property/new')
+          button.btn.btn-info Add new Listing
+  .container
+    .page_body  
+      table.table.table-striped.table-hover.listing_table
+        thead
+          tr
+            th 
+            th Reference
+            th Categories
+            th price
+            th Status
+        tbody
+          tr
+            td 1
+          tr
+            td 2
+          tr.info
+            td 3
+          tr.success
+            td 4
