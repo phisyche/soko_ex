@@ -4,38 +4,49 @@ block content
   .container.py-3
     .row
       .mx-auto.col-sm-9
-        .card
-          .card-header
-            h4.mb-0 User Information
-          .card-body
-            form.form(role='form', autocomplete='off')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label First name
-                .col-lg-9
-                  input.form-control(type='text')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label Last name
-                .col-lg-9
-                  input.form-control(type='text')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label Email
-                .col-lg-9
-                  input.form-control(type='email')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label Username
-                .col-lg-9
-                  input.form-control(type='text')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label Password
-                .col-lg-9
-                  input.form-control(type='password', value='')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label Confirm
-                .col-lg-9
-                  input.form-control(type='password', value='')
-              .form-group.row
-                label.col-lg-6.col-form-label.form-control-label
-                .col-lg-9
-                  input.btn.btn-secondary(type='reset', value='Cancel')
-                  input.btn.btn-primary(type='button', value='Save Changes')
-        // /form user info
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item
+            a.nav-link.active(data-toggle='tab', href='#details', role='tab') Details
+          li.nav-item
+            a.nav-link(data-toggle='tab', href='#edit', role='tab') Edit   
+        .tab-content
+          #details.tab-pane.active(role='tabpanel')
+            h4 User Details
+          // /form user info
+          #edit.tab-pane(role='tabpanel')
+            .card
+              .card-header
+                h4.mb-0 User Information
+              .card-body
+                form.form(role='form', autocomplete='off')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label First name
+                    .col-lg-9
+                      input.form-control(type='text')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label Last name
+                    .col-lg-9
+                      input.form-control(type='text')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label Email
+                    .col-lg-9
+                      input.form-control(type='email')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label Username
+                    .col-lg-9
+                      input.form-control(type='text')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label Password
+                    .col-lg-9
+                      input.form-control(type='password', value='')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label Confirm
+                    .col-lg-9
+                      input.form-control(type='password', value='')
+                  .form-group.row
+                    label.col-lg-6.col-form-label.form-control-label
+                    .col-lg-9
+                      input.btn.btn-secondary(type='reset', value='Cancel')
+                      input.btn.btn-primary(type='button', value='Save Changes')
+
+script(src='javascripts/admin/dashboard.js')
