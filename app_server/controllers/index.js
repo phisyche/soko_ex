@@ -31,5 +31,5 @@ res.render('layouts/profile', { title: 'My Profile' });
 };
 
 module.exports.favourites = function(req, res){
-res.render('layouts/dashboard_layout', { title: 'My Favourites' });
+res.render('layouts/favourites', { title: 'My Favourites' });
 };

@@ -1,4 +1,25 @@
 extends dashboard_layout
 
 block content
-  h3 Favourites
+  .container
+    .row
+      .col-sm-9
+        h3.fav_head Favourites
+  .container
+    .page_body  
+      table.table.table-striped.table-hover.listing_table
+        thead
+          tr
+            th 
+            th Property Name
+            th Categories
+            th price
+        tbody
+          tr
+            td 1
+          tr
+            td 2
+          tr.info
+            td 3
+          tr.success
+            td 4
