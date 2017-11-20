@@ -32,12 +32,15 @@ html
                 li
                   a(href='/dashboard') Dashboard
                 li
-                  a(href='#') Settings
-                li
-                  a(href='#') Log out
+                  a(href='/logout') Log out
           else
-            li
-              a(href='/login/') Login/Register
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown') Login/Register
+              ul.dropdown-menu
+                li
+                  a(href='/login/') Login
+                li
+                  a(href='/register/') Register
           li
             a(href='/property/new')
               button.btn.btn-info(type='button') ADD PROPERTY +
