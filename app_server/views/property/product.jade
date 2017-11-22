@@ -3,35 +3,6 @@ extends ../layout
 block content
   .container
     .col-md-12
-<<<<<<< HEAD
-      .thumbnail
-        .row
-          .col-sm-6
-            img.img-responsive(src="/uploads/"+property.photo width="100%" alt='')
-            .thumbnails.row
-              each image in property.gallery
-                .col-xs-3
-                  a(href='/property/#{property.slug}')
-                    img.img-thumbnail.img-responsive(src='/uploads/'+image.filename, width="100%" alt='')
-          .col-sm-6
-            h4.pull-right Kshs #{property.price}
-            h4
-              a(href='/property/#{property.slug}')
-                sup
-                =property.name
-            p
-              !{property.description}
-              #map(style='width:510px;height:300px;background:yellow')
-              script.
-                function myMap() {
-                var mapCanvas = document.getElementById("map");
-                var mapOptions = {
-                center: new google.maps.LatLng(0, 40), zoom: 10
-                };
-                var map = new google.maps.Map(mapCanvas, mapOptions);
-                }
-              script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap')
-=======
       .thumbnail.row
         .col-sm-6
           img.img-responsive.nopadding(src="/uploads/"+property.photo width="100%" alt='')
@@ -40,7 +11,7 @@ block content
                 a.col-md-4.col-sm-6.nopadding(href='/uploads/'+image.filename, width="100%" alt='#{property.slug}')
                   img.img-thumbnail.img-responsive(src='/uploads/'+image.filename, width="100%" alt='')
         .col-sm-6
-          h4.pull-right Ksh: #{property.price}
+          h4.pull-right Kshs #{property.price}
           h4
             a(href='/property/#{property.slug}')
               sup
@@ -49,4 +20,3 @@ block content
             !{property.description}
           div(id='', style='overflow:scroll; height:400px;')
             !{property.map}
->>>>>>> 42c15cb18a190840159a7373130662a4787c8ec2

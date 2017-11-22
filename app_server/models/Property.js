@@ -1,13 +1,10 @@
 const mongoose = require('mongoose');
-<<<<<<< HEAD
 var uri = 'mongodb://kev:1234@ds123725.mlab.com:23725/soko_ex';
 //var uri = 'mongodb://127.0.0.1/property';
-=======
 var superPagination = require('super-pagination').mongoose;
 
 //var uri = 'mongodb://kev:1234@ds123725.mlab.com:23725/soko_ex';
 var uri = 'mongodb://127.0.0.1/property';
->>>>>>> 42c15cb18a190840159a7373130662a4787c8ec2
 var db = mongoose.connect(uri, {useMongoClient: true });
 mongoose.Promise =require('bluebird');
 
@@ -29,13 +26,10 @@ const propertySchema = new Schema({
 		features: Array,
 		gallery: Array,
 		user_id: String
-<<<<<<< HEAD
-=======
 });
 
 propertySchema.plugin(superPagination, {
     theme : 'bootstrap'
->>>>>>> 42c15cb18a190840159a7373130662a4787c8ec2
 });
 
 module.exports = mongoose.model('Property', propertySchema);
