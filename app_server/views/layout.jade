@@ -8,6 +8,7 @@ html
     link(rel='stylesheet', href='/stylesheets/account.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-select.min.css')
+    link(rel='stylesheet', href='/stylesheets/lightgallery.css')
 
   body
     .navbar.navbar-default
@@ -69,10 +70,12 @@ html
   script(src="/javascripts/tinymce.min.js")
   script(src="/javascripts/bootstrap-select.min.js")
   script(src="/javascripts/jquery.swipebox.js")
+  script(src="/javascripts/lightgallery.min.js")
   script.
         $(document).ready(function () {
            //$('.swipebox').swipebox();
         });
+        lightGallery(document.getElementById('lightgallery'));
         tinymce.init({ 
             selector:'textarea',
             height: 150,

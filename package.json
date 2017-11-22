@@ -29,6 +29,7 @@
     "serve-favicon": "~2.4.5",
     "slug": "^0.9.1",
     "socket.io": "^2.0.4",
+    "super-pagination": "^0.5.12",
     "tinymce": "^4.7.2"
   }
 }
