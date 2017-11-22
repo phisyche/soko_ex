@@ -23,7 +23,10 @@ module.exports.dashboard = function(req, res){
 };
 
 module.exports.listing = function(req, res){
-res.render('layouts/my_listing', { title: 'My Listings' });
+	propertyModel.find({user_id: res.locals.user.username}, function(err, data){
+		if(err) throw err;
+			res.render('layouts/my_listing', {title: 'My Listings', propertys: data, });
+	})
 };
 
 module.exports.profile = function(req, res){

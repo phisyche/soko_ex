@@ -18,11 +18,13 @@ block content
             th Categories
             th price
         tbody
-          tr
-            td 1
-          tr
-            td 2
-          tr.info
-            td 3
-          tr.success
-            td 4
+          each property in propertys
+            tr
+              th
+              td 
+                a(href='/property/#{property.slug}')
+                  sup
+                  =property.name
+              td !{property.category}
+              td Kshs !{property.price} 
+            
