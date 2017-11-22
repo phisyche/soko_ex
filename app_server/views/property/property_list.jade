@@ -71,6 +71,7 @@ block content
           .clearfix  
   .container
     .row-fluid
+      p Properties Found #{totalRecords}
       each property in propertys
         .col-sm-6.col-md-4
           a(href='/property/#{property.slug}')
@@ -93,22 +94,7 @@ block content
                     span.glyphicon.glyphicon-star
                     span.glyphicon.glyphicon-star
                     span.glyphicon.glyphicon-star
-    .row-fluid  
-      .text-center
-        ul.pagination
-          li.disabled
-            a(href='#') «
-          li.active
-            a(href='#') 1
-          li
-            a(href='#') 2
-          li
-            a(href='#') 3
-          li
-            a(href='#') 4
-          li
-            a(href='#') 5
-          li
-            a(href='#') »
+    .row-fluid
+      !{pagination}
 
 script(src='/bootstrap/js/bootstrap.js')

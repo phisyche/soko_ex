@@ -4,11 +4,18 @@ var slug = require('slug');
 var propertyModel = require(__dirname + '/../models/Property');
 
 module.exports.homelist = function(req, res){
-	propertyModel.find({}, function(err, data){
+	propertyModel.paginate({
+	    query : {
+	    },
+	    page : req.query.page || 1,
+	    populate : 'user',
+	    per_page : 5,
+	    url : '/'
+	},  function(err, data, pagination){
 		if(err) throw err;
-        res.render('property/property_list', { title: 'Home', propertys: data, });
+		console.log(data);
+        res.render('property/property_list', { title: 'Home', propertys: data, pagination : pagination.render() });
     });
-
 };
 
 /* GET 'Property info' page */
