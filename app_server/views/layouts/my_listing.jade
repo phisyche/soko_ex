@@ -17,6 +17,7 @@ block content
             th Property Name
             th Categories
             th price
+            th Features
         tbody
           each property in propertys
             tr
@@ -26,5 +27,6 @@ block content
                   sup
                   =property.name
               td !{property.category}
-              td Kshs !{property.price} 
+              td Kshs !{property.price}
+              td !{property.features} 
             

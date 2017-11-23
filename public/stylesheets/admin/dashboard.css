@@ -24,6 +24,6 @@ h3.fav_head {
   margin: 0 auto;
 }
 .table thead th {
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 500;
 }

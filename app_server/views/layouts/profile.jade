@@ -14,7 +14,28 @@ block content
             br
             .card
               .card-header
-                h4.mb-0 User Information
+                .container
+                  .row
+                    .col-xs-12.col-sm-8.col-md-10
+                      .well.well-sm
+                        .row
+                          .col-sm-6.col-md-8
+                            h4
+                              | Bhaumik Patel
+                            small
+                              cite(title='Nairobi, Kenya')
+                                | Nairobi, Kenya 
+                                i.glyphicon.glyphicon-map-marker
+                            p
+                              i.glyphicon.glyphicon-envelope
+                              | email@example.com
+                              br
+                              i.glyphicon.glyphicon-globe
+                              | 0712345678
+                              br
+                              i.glyphicon.glyphicon-gift
+                              | June 02, 1988
+
           // /form user info
           #edit.tab-pane(role='tabpanel')
             br
