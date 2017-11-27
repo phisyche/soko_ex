@@ -24,6 +24,51 @@ var User = require('./app_server/models/userModel');
 const mongoose = require('mongoose');
 
 var app = express();
+var RedisStore       = require( 'connect-redis' )( session )
+var GoogleStrategy   = require( 'passport-google-oauth2' ).Strategy;
+var server           = require( 'http' ).createServer( app )
+
+
+var GOOGLE_CLIENT_ID      = "--insert-google-client-id-here--"
+var GOOGLE_CLIENT_SECRET  = "--insert-google-client-secret-here--";
+
+
+passport.use(new GoogleStrategy({
+    clientID: "335068842746-vt75khn9ducmclmp3667cf70clre8ue1.apps.googleusercontent.com",
+    clientSecret: "MJp5Y4WGlkXs3GdxM0ZL6y9Z",
+    //NOTE :
+    //Carefull ! and avoid usage of Private IP, otherwise you will get the device_id device_name issue for Private IP during authentication
+    //The workaround is to set up thru the google cloud console a fully qualified domain name such as http://mydomain:3000/
+    //then edit your /etc/hosts local file to point on your private IP.
+    //Also both sign-in button + callbackURL has to be share the same url, otherwise two cookies will be created and lead to lost your session
+    //if you use it.
+    callbackURL: "http://127.0.0.1:3000/auth/google/callback",
+    passReqToCallback   : true
+  },
+  function(request, accessToken, refreshToken, profile, done) {
+    // asynchronous verification, for effect...
+    process.nextTick(function () {
+
+      // To keep the example simple, the user's Google profile is returned to
+      // represent the logged-in user.  In a typical application, you would want
+      // to associate the Google account with a user record in your database,
+      // and return that user instead.
+      return done(null, profile);
+    });
+  }
+));
+
+
+app.get('/auth/google', passport.authenticate('google', { scope: [
+       'https://www.googleapis.com/auth/plus.login',
+       'https://www.googleapis.com/auth/plus.profile.emails.read']
+}));
+
+app.get( '/auth/google/callback',
+    	passport.authenticate( 'google', {
+    		successRedirect: '/',
+    		failureRedirect: '/login'
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));

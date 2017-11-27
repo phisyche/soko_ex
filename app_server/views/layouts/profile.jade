@@ -21,20 +21,17 @@ block content
                         .row
                           .col-sm-6.col-md-8
                             h4
-                              | Bhaumik Patel
+                              !{user.names}
                             small
                               cite(title='Nairobi, Kenya')
                                 | Nairobi, Kenya 
                                 i.glyphicon.glyphicon-map-marker
                             p
                               i.glyphicon.glyphicon-envelope
-                              | email@example.com
+                                | email@example.com
                               br
                               i.glyphicon.glyphicon-globe
-                              | 0712345678
-                              br
-                              i.glyphicon.glyphicon-gift
-                              | June 02, 1988
+                                !{user.phone}
 
           // /form user info
           #edit.tab-pane(role='tabpanel')
@@ -43,7 +40,7 @@ block content
               .card-header
                 h4.mb-0 Edit Details
               .card-body
-                form.form(role='form', autocomplete='off')
+                form.form(role='form', method="POST", action="/user/#{user._id}" autocomplete='off')
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label First name
                     .col-lg-9
@@ -59,7 +56,7 @@ block content
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label Username
                     .col-lg-9
-                      input.form-control(type='text')
+                      input.form-control(type='text' )
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label Password
                     .col-lg-9
