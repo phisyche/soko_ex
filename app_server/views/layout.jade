@@ -7,8 +7,6 @@ html
     link(rel='stylesheet', href='/bootstrap/css/usebootstrap.less')
     link(rel='stylesheet', href='/stylesheets/account.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/bootstrap-select.min.css')
-    link(rel='stylesheet', href='/stylesheets/lightgallery.css')
 
   body
     .navbar.navbar-default
@@ -33,15 +31,15 @@ html
                 li
                   a(href='/dashboard') Dashboard
                 li
-                  a(href='/logout') Log out
+                  a(href='/logout') logout
           else
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown') Login/Register
               ul.dropdown-menu
                 li
-                  a(href='/login/') Login
+                  a(href='/login') Login
                 li
-                  a(href='/register/') Register
+                  a(href='/register') Register
           li
             a(href='/property/new')
               button.btn.btn-info(type='button') ADD PROPERTY +
@@ -68,14 +66,11 @@ html
   script(src='/bootstrap/js/bootstrap.min.js')
   script(src='/javascripts/usebootstrap.js')
   script(src="/javascripts/tinymce.min.js")
-  script(src="/javascripts/bootstrap-select.min.js")
   script(src="/javascripts/jquery.swipebox.js")
-  script(src="/javascripts/lightgallery.min.js")
   script.
         $(document).ready(function () {
            //$('.swipebox').swipebox();
         });
-        lightGallery(document.getElementById('lightgallery'));
         tinymce.init({ 
             selector:'textarea',
             height: 150,

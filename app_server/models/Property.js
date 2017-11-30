@@ -25,7 +25,8 @@ const propertySchema = new Schema({
 		category: String,
 		features: Array,
 		gallery: Array,
-		user_id: String
+		user_id: String,
+		date: Date
 });
 
 propertySchema.plugin(superPagination, {

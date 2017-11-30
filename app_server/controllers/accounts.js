@@ -3,6 +3,34 @@ var bcrypt = require('bcryptjs');
 var slug = require('slug');
 var User = require('../models/userModel');
 
+module.exports.overview = function(req, res){
+res.render('account', { title: 'My Account' });
+};
+
+/* GET 'listings' page */
+module.exports.mylisting = function(req, res){
+res.render('account', { title: 'My Listings' });
+};
+
+/* GET 'profile' page */
+module.exports.myprofile = function(req, res){
+res.render('account', { title: 'My Profile' });
+};
+
+/* GET 'Inbox' page */
+module.exports.messages = function(req, res){
+res.render('account', { title: 'Messages' });
+};
+
+/* GET 'settings' page */
+module.exports.settings = function(req, res){
+res.render('account', { title: 'Settings' });
+};
+
+/* GET 'Favourites' page */
+module.exports.favourites = function(req, res){
+res.render('account', { title: 'Favourites' });
+};
 
 /* GET 'Inbox' page */
 module.exports.login = function(req, res){
@@ -17,6 +45,7 @@ module.exports.register = function(req, res){
 module.exports.registerPost = function(req, res){
   var names = req.body.names;
   var phone = req.body.phone;
+	var email = req.body.email;
   var password = req.body.password;
   var role = 0;
   var credits =1000;
@@ -42,6 +71,7 @@ module.exports.registerPost = function(req, res){
     User.create({
         id: slug(names),
     	  username: phone,
+				email: email,
     	  names: names,
         password: hash,
         phone: phone,

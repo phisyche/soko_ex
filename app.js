@@ -29,8 +29,8 @@ var GoogleStrategy   = require( 'passport-google-oauth2' ).Strategy;
 var server           = require( 'http' ).createServer( app )
 
 
-var GOOGLE_CLIENT_ID      = "--insert-google-client-id-here--"
-var GOOGLE_CLIENT_SECRET  = "--insert-google-client-secret-here--";
+var GOOGLE_CLIENT_ID      = "335068842746-vt75khn9ducmclmp3667cf70clre8ue1.apps.googleusercontent.com"
+var GOOGLE_CLIENT_SECRET  = "MJp5Y4WGlkXs3GdxM0ZL6y9Z";
 
 
 passport.use(new GoogleStrategy({
