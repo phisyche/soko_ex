@@ -9,10 +9,11 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
 		username: { type: String,required: true, index: { unique: true, sparse: true }},
 		email: String,
+		googleId: String,
 		names: String,
 		phone: String,
 		password: String,
-		role: String
+		role: String,
 });
 
 module.exports = mongoose.model('User', userSchema);

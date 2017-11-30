@@ -3,6 +3,8 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+
 @font-face {
     font-family: 'Montserrat-Regular';
     src:url(../fonts/Montserrat-Regular.ttf) format('truetype');
@@ -33,12 +35,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   	padding: 0;
   	float: left;
   	width: 14.285%;
-}
-a {
-  font-size: 15px;
-}
-h4.pull-right {
-  font-size: 15px;
 }
 .banner-bottom-top {
   	background-color: #F7F7F7;
