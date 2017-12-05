@@ -4,7 +4,7 @@ block content
   .page_body
     .container
       .col-md-offset-3.col-md-6.col-md-offset-3
-          h3.text-center Add Property 
+          h3.text-center Edit Property 
       .col-md-offset-0.col-md-12.col-md-offset-0
         form.form-horizontal(method="post",action="/property/new",enctype="multipart/form-data")
           .form-group
@@ -24,14 +24,7 @@ block content
               input#price.form-control(type='text', name='price', placeholder='price')
           .form-group
             .col-sm-12
-              select.selectpicker.form-control(name='listtype', data-selected-text-format='count > 5')
-                option(value='') Choose Property type
-                option(value='sale') For Sale
-                option(value='rent') For Rent
-          .form-group
-            .col-sm-12
               select.selectpicker.form-control(name='category', data-selected-text-format='count > 4')
-                option(value='') Choose category
                 option(data-icon='glyphicon glyphicon-signal', value='apartment') Apartment
                 option(data-icon='glyphicon-credit-card', value='house') House
                 option(data-icon='glyphicon-cutlery', value='land') Land
@@ -39,8 +32,7 @@ block content
                 option(data-icon='glyphicon-gift', value='developments') Developments 
           .form-group
             .col-sm-12
-              h5 select additional features
-              select.selectpicker.form-control(name='features', data-selected-text-format='count > 4', multiple)
+              select.selectpicker.form-control(name='features', data-selected-text-format='count > 4', placeholder='features', multiple)
                 option(data-icon='glyphicon glyphicon-home', value='house') Bungalow
                 option(data-icon='glyphicon glyphicon-signal', value='office') Office
                 option(data-icon='glyphicon-credit-card', value='shop') Shop

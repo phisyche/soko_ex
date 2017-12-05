@@ -32,7 +32,6 @@ block content
                               br
                               i.glyphicon.glyphicon-globe
                                 !{user.phone}
-
           // /form user info
           #edit.tab-pane(role='tabpanel')
             br
@@ -52,23 +51,23 @@ block content
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label Email
                     .col-lg-9
-                      input.form-control(type='email')
+                      input.form-control(type='email', name='email', value="#{user.email}")
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label Username
                     .col-lg-9
-                      input.form-control(type='text' )
+                      input.form-control(type='text' , name='name', value="#{user.names}")
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label Password
                     .col-lg-9
-                      input.form-control(type='password', value='')
+                      input.form-control(type='password', name='password', value="")
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label Confirm
                     .col-lg-9
-                      input.form-control(type='password', value='')
+                      input.form-control(type='password', name='password', value="")
                   .form-group.row
                     label.col-lg-6.col-form-label.form-control-label
                     .col-lg-9
                       input.btn.btn-secondary(type='reset', value='Cancel')
-                      input.btn.btn-primary(type='button', value='Save Changes')
+                      input.btn.btn-primary(type='submit', value='Save Changes')
 
 script(src='javascripts/admin/dashboard.js')

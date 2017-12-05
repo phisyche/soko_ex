@@ -87,3 +87,15 @@ module.exports.registerPost = function(req, res){
 	});
   //}
 };
+
+module.exports.updateUser = function (req, res) {
+	console.log(req.body);
+
+	User.findByIdAndUpdate({_id: req.params.user_id}, {$set:req.body}, function(err, user) {
+  if (err) throw err;
+
+  // we have the updated user returned to us
+  console.log(user);
+});
+
+};

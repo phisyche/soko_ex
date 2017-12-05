@@ -9,6 +9,7 @@ var roles = require(__dirname + '/../config/roles');
 router.get('/', ctrlProperties.homelist);
 router.get('/property', ctrlProperties.propertyInfo);
 router.get('/property/new', roles.auth, ctrlProperties.addProperty);
+router.get('/property/product_edit', ctrlProperties.editProperty);
 
 /* Accounts pages */
 router.get('/login', ctrlAccounts.login);

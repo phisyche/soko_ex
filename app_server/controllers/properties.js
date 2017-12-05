@@ -57,6 +57,10 @@ module.exports.postProperty = function(req, res){
 	});
 }
 
+module.exports.editProperty = function(req, res){
+res.render('property/product_edit', { title: 'Edit Property' });
+};
+
 module.exports.forsale = function(req, res){
 	propertyModel.find({listType: 'sale'}, function(err, data){
 		if(err) throw err;
