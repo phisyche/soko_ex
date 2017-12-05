@@ -10,6 +10,11 @@ block content
             each image in property.gallery
                 a.col-md-4.col-sm-6.nopadding(href='/uploads/'+image.filename, width="100%" alt='#{property.slug}')
                   img.img-thumbnail.img-responsive(src='/uploads/'+image.filename, width="100%" alt='')
+          br
+          br
+          h3 Features
+          p
+            !{property.features}
         .col-sm-6
           h4.pull-right Kshs #{property.price}
           h4

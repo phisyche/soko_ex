@@ -14,16 +14,14 @@ block content
             .col-sm-12
               textarea#description.form-control(name='description', placeholder='Property description')
           .form-group
-            .col-sm-12
+            .col-sm-6
               input#city.form-control(type='text', name='city', placeholder='City')
-          .form-group
-            .col-sm-12
+            .col-sm-6
               input#map.form-control(type='text', name='map', placeholder='map')
           .form-group
-            .col-sm-12
+            .col-sm-6
               input#price.form-control(type='text', name='price', placeholder='price')
-          .form-group
-            .col-sm-12
+            .col-sm-6
               select.selectpicker.form-control(name='listtype', data-selected-text-format='count > 5')
                 option(value='') Choose Property type
                 option(value='sale') For Sale
@@ -32,17 +30,19 @@ block content
             .col-sm-12
               select.selectpicker.form-control(name='category', data-selected-text-format='count > 4')
                 option(value='') Choose category
-                option(data-icon='glyphicon glyphicon-signal', value='apartment') Apartment
-                option(data-icon='glyphicon-credit-card', value='house') House
-                option(data-icon='glyphicon-cutlery', value='land') Land
-                option(data-icon='glyphicon glyphicon-glass', value='commercial') Commercial
-                option(data-icon='glyphicon-gift', value='developments') Developments 
+                option(data-icon='glyphicons glyphicon-building', value='apartment') Apartment
+                option(data-icon='glyphicon-home', value='house') House
+                option(data-icon='glyphicon-leaf', value='land') Agricultural Land
+                option(data-icon='glyphicons glyphicon-road', value='land') Commercial Land
+                option(data-icon='glyphicon-home', value='land') Residential Land
+                option(data-icon='glyphicons glyphicons-mixed-buildings', value='house') Office Space
+                option(data-icon='glyphicons glyphicon-industrial-zone', value='developments') New Developments 
           .form-group
             .col-sm-12
               h5 select additional features
               select.selectpicker.form-control(name='features', data-selected-text-format='count > 4', multiple)
-                option(data-icon='glyphicon glyphicon-home', value='house') Bungalow
-                option(data-icon='glyphicon glyphicon-signal', value='office') Office
+                option(data-icon='glyphicons glyphicons-open-water', value='house') Swimming pool
+                option(data-icon='glyphicon glyphicon-signal', value='office') Lawn
                 option(data-icon='glyphicon-credit-card', value='shop') Shop
                 option(data-icon='glyphicon-cutlery', value='land') Agricultural Land
                 option(data-icon='glyphicon glyphicon-glass', value='land') Residential Land
