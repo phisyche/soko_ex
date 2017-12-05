@@ -21,9 +21,12 @@ block content
             a(href='/property/#{property.slug}')
               sup
               =property.name
-          a(href='/property/product_edit')
-            button.pull-right.btn.btn-info(type='button') Edit property
           p
             !{property.description}
+          br
+          a(href='/property/product_edit')
+            button.btn.btn-info(type='button') Edit property
+          br
+          br  
           div(id='', style='overflow:scroll; height:400px;')
             !{property.map}

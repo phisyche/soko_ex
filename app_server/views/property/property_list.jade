@@ -1,6 +1,7 @@
 extends ../layout
 
 block content
+  link(href='/stylesheets/search.css', rel='stylesheet', type='text/css', media='all')
   link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
   link(href='/bootstrap/css/bootstrap.css', rel='stylesheet', type='text/css', media='all')
   script(src='/javascripts/jquery.min.js')
@@ -23,12 +24,57 @@ block content
     .featurette
       .featurette-inner.text-center
         form.search(role='form')
-          h3 Buy and Rent Property in Kenya
-          .input-group.input-group-lg
-            input.form-control(type='search', placeholder='City, County')
-            span.input-group-btn
-              button.btn.btn-info(type='button')
-                i.glyphicon.glyphicon-search
+          h5 Buy and Rent Property in Kenya
+            .row
+              .board
+                // <h2>Welcome to IGHALO!<sup>™</sup></h2>
+                .board-inner
+                  ul#myTab.nav.nav-tabs
+                    .liner
+                    li.active
+                      a(href='#messages', data-toggle='tab', title='Buy Property')
+                        span.round-tabs.three
+                          p(style='font-size: 12px;') Buy
+                    li
+                      a(href='#messages', data-toggle='tab', title='Rent Property')
+                        span.round-tabs.three
+                          p(style='font-size: 12px;') Rent
+                .tab-content
+                  .container
+                    .row
+                      .col-xs-8.col-xs-offset-2
+                        .input-group
+                          input#search_param(type='hidden', name='search_param', value='all')
+                          input.form-control(type='text', name='x', placeholder='Location')
+                          .input-group-btn.search-panel
+                            button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                              span#search_concept Size
+                              span.caret
+                            ul.dropdown-menu(role='menu')
+                              li
+                                a(href='#contains') Contains
+                              li
+                                a(href='#its_equal') It's equal
+                              li
+                                a(href='#greather_than') Greather than >
+                              li
+                                a(href='#less_than') Less than < 
+                              li.divider
+                              li
+                                a(href='#all') Anything
+                            button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                              span#search_concept Type
+                              span.caret
+                            button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                              span#search_concept Bedrooms
+                              span.caret
+                          input#search_param(type='hidden', name='search_param', value='all')
+                          input.form-control(type='text', name='x', placeholder='Price')
+                          span.input-group-btn
+                            button.btn.btn-default(type='button')
+                              span.glyphicon.glyphicon-search
+                  .clearfix
+
   .banner-bottom-top
     .container
       .bottom-header
@@ -89,3 +135,4 @@ block content
       !{pagination}
 
 script(src='/bootstrap/js/bootstrap.js')
+script(src='/javascript/search.js')
