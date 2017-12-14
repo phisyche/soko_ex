@@ -39,6 +39,14 @@ html(lang='en')
             a.nav-link(href='/dashboard/favourites')
               i.fa.fa-fw.fa-table
               span.nav-link-text Favourites
+          li.nav-item.dropdown(data-toggle='tooltip', data-placement='right', title='Tables')
+            a.nav-link(href='#', data-toggle='dropdown') Analytics
+              ul.dropdown-menu
+                li
+                  a(href='#') Users
+                li
+                  a(href='#') Properties
+
         ul.navbar-nav.sidenav-toggler
           li.nav-item
             a#sidenavToggler.nav-link.text-center
