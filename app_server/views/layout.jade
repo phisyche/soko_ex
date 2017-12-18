@@ -70,6 +70,15 @@ html
   script(src='/javascripts/usebootstrap.js')
   script(src="/javascripts/tinymce.min.js")
   script(src="/javascripts/jquery.swipebox.js")
+  script(src='/socket.io/socket.io.js')
+  script.
+    var socket = io();
+    var visitorData = {
+    referringSite: document.referrer,
+    page: location.pathname
+    }
+    socket.emit('visitor-data', visitorData);
+
   script.
         $(document).ready(function () {
            //$('.swipebox').swipebox();

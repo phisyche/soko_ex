@@ -15,6 +15,10 @@ module.exports.blog = function(req, res){
 res.render('index', { title: 'Property Forum' });
 };
 
+module.exports.analytics = function(req, res){
+res.render('layouts/analytics', { title: 'Analytics' });
+};
+
 /* GET home page */
 module.exports.dashboard = function(req, res){
 	if(res.locals.user.role == '1')

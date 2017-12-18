@@ -34,4 +34,5 @@ router.get('/hostels', ctrlProperties.hostels);
 router.get('/:name', ctrlProperties.fetchProperty);
 
 
+
 module.exports = router;
