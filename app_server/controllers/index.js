@@ -22,8 +22,8 @@ res.render('layouts/analytics', { title: 'Analytics' });
 /* GET home page */
 module.exports.dashboard = function(req, res){
 	if(res.locals.user.role == '1')
-		res.render('admin/index', { title: 'Admin Dashboard' });
-	res.render('admin/index', { title: 'User Dashboard' });
+		res.render('dashboard/dashboard1', { title: 'Admin Dashboard' });
+	res.render('dashboard/dashboard1', { title: 'User Dashboard' });
 };
 
 module.exports.listing = function(req, res){
