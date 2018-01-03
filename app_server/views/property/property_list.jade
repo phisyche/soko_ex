@@ -1,127 +1,71 @@
-extends ../layout
+extends ../layout2
 
 block content
-  link(href='/stylesheets/search.css', rel='stylesheet', type='text/css', media='all')
+  .jumbotron
+    .w3-banner-head-info
+      .container
+        .banner-text
+          h2 Buy or Rent Property in Kenya
+          .book-form
+            form(action='#', method='post')
+              .col-md-12.form-time-w3layouts
+                label
+                  i.fa.fa-map-marker(aria-hidden='true')
+                  | Location
+                input(type='text', placeholder='Location', required='')
+              .col-md-3.form-time-w3layouts
+                label
+                  i.fa.fa-home(aria-hidden='true')
+                  |  Category
+                select.form-control
+                  option Real estate
+                  option Real Homes
+                  option Apartments
+                  option Real Flats
+              .col-md-3.form-date-w3-agileits
+                label
+                  i.fa.fa-money(aria-hidden='true')
+                  |  Price
+                input(type='text', placeholder='Max. Price', required='')
+              .col-md-3.form-date-w3-agileits
+                label
+                  i.fa.fa-hotel(aria-hidden='true')
+                  |  Bedrooms
+                input(type='text', placeholder='Min. Bedrooms', required='')
+              .col-md-3.form-left-agileits-submit
+                input(type='submit', value='Search')
 
-  script(src='/javascripts/jquery.min.js')
-  script(src='javascripts/scripts.js')
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-  script(type='application/x-javascript').
-    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-  script(src='javascripts/responsiveslides.min.js')
-  script.
-    $(function () {
-    $("#slider").responsiveSlides({
-    auto: true,
-    speed: 500,
-    namespace: "callbacks",
-    pager: true,
-    });
-    });
-  .jumbotron.specialjum
-    .featurette
-      .featurette-inner.text-center
-        form.search(role='form')
-          h5 Buy and Rent Property in Kenya
-            .container
-              .row
-                .col-md-12
-                  #adv-search.input-group
-                    input.form-control(type='text', placeholder='Enter a location')
-                    .input-group-btn
-                      .btn-group(role='group')
-                        .dropdown.dropdown-lg
-                          button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='false', placeholder='more options')
-                            span.caret
-                          .dropdown-menu.dropdown-menu-right(role='menu')
-                            .checkbox
-                              label
-                                input(type='checkbox')
-                              |  For Sale  
-                              label
-                                input(type='checkbox')
-                              |  For Rent
-                            form.form-horizontal(role='form')
-                              .form-group
-                                label(for='filter')
-                                select.form-control
-                                  option(value='', selected='') Category
-                                  option(value='') Houses
-                                  option(value='') Land
-                                  option(value='') Apartments
-                                  option(value='') Commercial Properties
-                                  option(value='') Offices
-                                  option(value='') Shops
-                              .form-group
-                                label(for='contain')
-                                input.form-control(type='text', placeholder='Min Bedrooms')
-                              .form-group
-                                label(for='contain')
-                                input.form-control(type='text', placeholder='Max Price')
-                              button.btn.btn-primary(type='submit')
-                                span.glyphicon.glyphicon-search(aria-hidden='true')
-                        button.btn.btn-primary(type='button')
-                          span.glyphicon.glyphicon-search(aria-hidden='true')
 
-                  .clearfix
+  .gallery-grids
+    .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
+      ul#myTab.nav.nav-tabs(role='tablist', data-aos='zoom-in')
+        li.active(role='presentation')
+          a#home-tab(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') All
+        li(role='presentation')
+          a#teach-tab(href='#teach', role='tab', data-toggle='tab', aria-controls='teach') Buildings
+        li(role='presentation')
+          a#train-tab(href='#train', role='tab', data-toggle='tab', aria-controls='train') Flats
+        li(role='presentation')
+          a#learn-tab(href='#learn', role='tab', data-toggle='tab', aria-controls='learn') Estates
+        li(role='presentation')
+          a#award-tab(href='#award', role='tab', data-toggle='tab', aria-controls='award') Homes
+      #myTabContent.tab-content
+        #home.tab-pane.fade.in.active(role='tabpanel', aria-labelledby='home-tab')
+          .tab_img
+            each property in propertys
+              .col-md-3.col-sm-6.col-xs-6.portfolio-grids(data-aos='zoom-in')
+                a.b-link-stripe.b-animate-go.lightninBox(href='/property/#{property.slug}', data-lb-group='1')
+                  img.img-responsive(src="/uploads/"+ property.photo, width="100%", alt='w3ls')
+                  .b-wrapper
+                    i.fa.fa-search-plus(aria-hidden='true')
+                    h4.pull-right Kshs #{property.price}
+                    h4
+                      a(href='/property/#{property.slug}')
+                        sup
+                        =property.name
+                    p 
+                      !{property.description}
 
-  .banner-bottom-top
-    .container
-      .bottom-header
-        .header-bottom
-          .bottom-head
-            a(href='/property/for_sale')
-              .buy-media
-                i.buy  
-                h6 Buy
-          .bottom-head
-            a(href='/property/for_rent')
-              .buy-media
-                i.rent  
-                h6 Rent
-          .bottom-head
-            a(href='/property/land')
-              .buy-media
-                i.sell  
-                h6 Land
-          .bottom-head
-            a(href='/property/commercial')
-              .buy-media
-                i.loan  
-                h6 Commercial
-          .bottom-head
-            a(href='/property/projects')
-              .buy-media
-                i.apart  
-                h6 Projects
-          .bottom-head
-            a(href='/property/dealers')
-              .buy-media
-                i.deal  
-                h6 Dealers
-          .bottom-head
-            a(href='/property/hostels')
-              .buy-media
-                i.pg  
-                h6 Hostels
-  .clearfix  
-    .container
-      .row-fluid
-        p Properties Found #{totalRecords}
-        each property in propertys
-          .col-sm-6.col-md-4
-            a(href='/property/#{property.slug}')
-              .thumbnail
-                img(src="/uploads/"+ property.photo, width="100%", alt='')
-                .caption
-                  h4.pull-right Kshs #{property.price}
-                  h4
-                    a(href='/property/#{property.slug}')
-                      sup
-                      =property.name
-                  p
-                    !{property.description}
     .row-fluid
       !{pagination}
   #map
@@ -133,6 +77,3 @@ block content
        4. Copy only URL and paste it within the src="" field below
      iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8389160739684!2d36.8066655142538!3d-1.2695533359650044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173961db13a7%3A0x77455c76e7f761b2!2sWestlands+Rd%2C+Nairobi!5e0!3m2!1sen!2ske!4v1507570875376', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
        
-
-script(src='/bootstrap/js/bootstrap.js')
-script(src='/javascript/search.js')
