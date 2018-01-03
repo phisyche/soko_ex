@@ -1,97 +1,181 @@
 doctype html
-html
+html(lang='en')
   head
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title= title
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
-    link(rel='stylesheet', href='/bootstrap/css/usebootstrap.less')
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap-select.min.css')
-    link(rel='stylesheet', href='/stylesheets/account.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/style1.css')
-
+    title SokoEstate | Home 
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Flat Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    
+    link(rel='stylesheet', type='text/css', href='/stylesheets/zoomslider.css')
+    script(type='text/javascript', src='/javascripts/modernizr-2.6.2.min.js')
+    link(href='/stylesheets/carousel.css', type='text/css', rel='stylesheet', media='all')
+    link(href='/stylesheets/jQuery.lightninBox.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/stylesheets/style_new.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/stylesheets/font-awesome.css', rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&subset=latin-ext,vietnamese', rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese', rel='stylesheet')
   body
-    .navbar.navbar-default
-      .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a(href='/')  
-          img(src='/images/logo.png')
-      .navbar-collapse.collapse.navbar-responsive-collapse
-        ul.nav.navbar-nav
-        ul.nav.navbar-nav.navbar-right
-          li
-            a(href='/blog/') Blog
-          if user
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown') 
-                = user.names
-                b.caret
-              ul.dropdown-menu
-                li
-                  a(href='/dashboard') Dashboard
-                li
-                  a(href='/logout') logout
-          else
-            li.dropdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown') Login/Register
-              ul.dropdown-menu
-                li
-                  a(href='/login') Login
-                li
-                  a(href='/register') Register
-          li
-            a(href='/property/new')
-              button.btn.btn-info(type='button') ADD PROPERTY +
+    .demo-inner-content
+      // /banner-info
+      .header
+        .header-main
+          .container
+            nav.navbar.navbar-default
+              .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                h1
+                  a(href='/')  
+                    img(src='/images/logo.png')
+              // navbar-header
+              #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                  li.scroll.hvr-outline-in
+                    a(href='/') For Sale
+                  li
+                    a(href='/') To Rent
+                  li
+                    a(href='/') New Projects
+                  if user
+                    li.dropdown.menu__item
+                      a.dropdown-toggle(href='#', data-toggle='dropdown') 
+                        = user.names
+                        b.caret
+                      ul.dropdown-menu
+                        li
+                          a(href='/dashboard') Dashboard
+                        li
+                          a(href='/logout') Logout
+                  else
+                    li.dropdown.menu__item
+                      a.dropdown-toggle.menu__link.hvr-outline-in(href='#', data-toggle='dropdown', data-hover='Pages', role='button', aria-haspopup='true', aria-expanded='false')
+                        | My Account
+                        span.caret
+                      ul.dropdown-menu
+                        li
+                          a(href='/login') Log In
+                        li
+                          a(href='register') Register
+                  li
+                    a(href='/blog') Blog
+                  li
+                    a(href='/property/new')
+                      button.btn.btn-info(type='button') ADD PROPERTY +
     block content
-    footer
-      .row
-        .col-xs-12
+    .footer
+      .container
+        .social
+          ul
+            li
+              a(href='#')
+                i.fa.fa-facebook
+            li
+              a(href='#')
+                i.fa.fa-twitter
+            li
+              a(href='#')
+                i.fa.fa-google-plus
+            li
+              a(href='#')
+                i.fa.fa-dribbble
+        .border
+        .agileits-w3layouts-copyright
           p
-            | Copyright © 
-            a(href='/') Sokoestate
-            | 2017
-      if errors
-        each error in errors
-          .alert.alert-danger=error.msg
-        if message    
-          .alert.alert-info=message
-        if success_msg     
-          .alert.alert-success=success_msg
-        if error_msg     
-          .alert alert-danger=error_msg
-        if error    
-          .alert.alert-danger=error
-  script(src='/javascripts/jquery-3.2.1.js')
-  script(src='/bootstrap/js/bootstrap.min.js')
-  script(src='/bootstrap/js/bootstrap-select.js')
-  script(src='/javascripts/usebootstrap.js')
-  script(src="/javascripts/tinymce.min.js")
-  script(src="/javascripts/jquery.swipebox.js")
-  script(src='/socket.io/socket.io.js')
-  script.
-    var socket = io();
-    var visitorData = {
-    referringSite: document.referrer,
-    page: location.pathname
-    }
-    socket.emit('visitor-data', visitorData);
+            | © 2017 Sokoestate.com All rights reserved
+          
+          
 
+
+  script(type='text/javascript', src='/javascripts/jquery-2.1.4.min.js')
+  // for bootstrap working
+  script(src='/javascripts/bootstrap.js')
+  // //for bootstrap working
+  // //js
+  // for banner js file
+  script(type='text/javascript', src='/javascripts/jquery.zoomslider.min.js')
+  // zoomslider js
+  // //for banner js file
+  // for team slider
+  // requried-jsfiles-for owl
+  script(src='/javascripts/owl.carousel.js')
   script.
-        $(document).ready(function () {
-           //$('.swipebox').swipebox();
-        });
-        tinymce.init({ 
-            selector:'textarea',
-            height: 150,
-              menubar: false,
-              plugins: [
-                'advlist autolink lists link image charmap print preview anchor',
-                'searchreplace visualblocks code fullscreen',
-                'insertdatetime media table contextmenu paste code'
-              ],
-              toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-              content_css: '//www.tinymce.com/css/codepen.min.css'
-        });
+    $(document).ready(function() {
+    $("#owl-demo").owlCarousel({
+    items : 4,
+    lazyLoad : true,
+    autoPlay : true,
+    navigation : true,
+    navigationText :  true,
+    pagination : false,
+    });
+    });
+  // //requried-jsfiles-for owl
+  // //for team slider
+  // js for portfolio lightbox
+  script(src='/javascripts/jQuery.lightninBox.js')
+  script(type='text/javascript').
+    $(".lightninBox").lightninBox();
+  // /js for portfolio lightbox
+  // for smooth scrolling
+  script(src='/javascripts/SmoothScroll.min.js')
+  script(type='text/javascript', src='/javascripts/move-top.js')
+  script(type='text/javascript', src='/javascripts/easing.js')
+  // here stars scrolling icon
+  script(type='text/javascript').
+    $(document).ready(function() {
+    /*
+    var defaults = {
+    containerID: 'toTop', // fading element id
+    containerHoverID: 'toTopHover', // fading element hover id
+    scrollSpeed: 1200,
+    easingType: 'linear'
+    };
+    */
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+  // //here ends scrolling icon
+  // //for smooth scrolling
+  // scrolling script
+  script(type='text/javascript').
+    jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+    });
+    });
+  // //scrolling script
+  // testimonilas slider
+  script(type='text/javascript').
+    $(window).load(function() {
+    $("#flexiselDemo1").flexisel({
+    visibleItems: 3,
+    animationSpeed: 1000,
+    autoPlay: true,
+    autoPlaySpeed: 3000,
+    pauseOnHover: true,
+    enableResponsiveBreakpoints: true,
+    responsiveBreakpoints: {
+    portrait: {
+    changePoint:480,
+    visibleItems: 1
+    },
+    landscape: {
+    changePoint:640,
+    visibleItems:3
+    },
+    tablet: {
+    changePoint:768,
+    visibleItems: 3
+    }
+    }
+    });
+    });
+  script(type='text/javascript', src='/javascripts/jquery.flexisel.js')
+  // testimonilas slider
