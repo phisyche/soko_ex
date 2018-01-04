@@ -7,6 +7,14 @@ block content
         .banner-text
           h2 Buy or Rent Property in Kenya
           .book-form
+            .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
+              ul#myTab.nav.nav-tabs(role='tablist', data-aos='zoom-in')
+                li.active(role='presentation')
+                  a(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') For sale
+                li(role='presentation')
+                  a(href='#teach', role='tab', data-toggle='tab', aria-controls='teach') For Rent
+                li(role='presentation')
+                  a(href='#train', role='tab', data-toggle='tab', aria-controls='train') New Projects
             form(action='#', method='post')
               .col-md-12.form-time-w3layouts
                 label
@@ -37,39 +45,52 @@ block content
 
 
   .gallery-grids
-    .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
-      ul#myTab.nav.nav-tabs(role='tablist', data-aos='zoom-in')
-        li.active(role='presentation')
-          a#home-tab(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') All
-        li(role='presentation')
-          a#teach-tab(href='#teach', role='tab', data-toggle='tab', aria-controls='teach') Buildings
-        li(role='presentation')
-          a#train-tab(href='#train', role='tab', data-toggle='tab', aria-controls='train') Flats
-        li(role='presentation')
-          a#learn-tab(href='#learn', role='tab', data-toggle='tab', aria-controls='learn') Estates
-        li(role='presentation')
-          a#award-tab(href='#award', role='tab', data-toggle='tab', aria-controls='award') Homes
-      #myTabContent.tab-content
-        #home.tab-pane.fade.in.active(role='tabpanel', aria-labelledby='home-tab')
-          .tab_img
-            each property in propertys
-              .col-md-3.col-sm-6.col-xs-6.portfolio-grids(data-aos='zoom-in')
-                a.b-link-stripe.b-animate-go.lightninBox(href='/property/#{property.slug}', data-lb-group='1')
-                  img.img-responsive(src="/uploads/"+ property.photo, width="100%", alt='w3ls')
-                  .b-wrapper
-                    i.fa.fa-search-plus(aria-hidden='true')
-                    h4.pull-right Kshs #{property.price}
-                    h4
-                      a(href='/property/#{property.slug}')
-                        sup
-                        =property.name
-                    p 
-                      !{property.description}
+    #myTabContent.tab-content
+      #home.tab-pane.fade.in.active(role='tabpanel', aria-labelledby='home-tab')
+        .tab_img
+          each property in propertys
+            .col-md-3.col-sm-6.col-xs-6.portfolio-grids(data-aos='zoom-in')
+              a.b-link-stripe.b-animate-go.lightninBox(href='/property/#{property.slug}', data-lb-group='1')
+                img.img-responsive(src="/uploads/"+ property.photo, width="100%", alt='w3ls')
+                .b-wrapper
+                  i.fa.fa-search-plus(aria-hidden='true')
+                  h4.pull-right Kshs #{property.price}
+                  h4
+                    a(href='/property/#{property.slug}')
+                      sup
+                      =property.name
+                  p 
+                    !{property.description}
 
         .clearfix  
  
     .row-fluid
       !{pagination}
+      
+    #services.services
+      .banner-dott
+        .heading
+          h3 How it works
+        .container
+          .services-top-grids
+            .col-md-4
+              .grid1
+                i.fa.fa-home(aria-hidden='true')
+                h4 Sign Up
+                p
+                  | Register with us to get all the tools to get your property to a wider audience.
+            .col-md-4
+              .grid1
+                i.fa.fa-building(aria-hidden='true')
+                h4 List your Property
+                p
+                  | Post the details of your property.
+            .col-md-4
+              .grid1
+                i.fa.fa-money(aria-hidden='true')
+                h4 Get a buyer or renter
+                p
+                  | Instantly get people interested in your property.
   #map
      //
        How to change your own map point

@@ -50,6 +50,11 @@ img{
     padding: 10px 0;
 }
 
+a {
+  font-weight: bold;
+  font-style: oblique;
+}
+
 /*--header end here--*/
 .banner {
     background: url(../images/banner3.jpg)no-repeat center;
@@ -62,13 +67,13 @@ img{
     position: relative;
 }
 .banner-dott {
-    background: url(../images/dott.png)repeat 0px 0px;
+    background: url("/images/property-banner.jpg")repeat 0px 0px;
     background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
     -o-background-size: 2px;
     -ms-background-size: 2px;
-    min-height: 780px;
+    min-height: 390px;
 }
 /*-- Navbar --*/
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -76,7 +81,7 @@ img{
 }
 .navbar-default .navbar-brand {
      font-size: 3em;
-    color: #FFF;
+    color: white;
     text-shadow: 3px 3px #000000;
 	text-decoration:none;
 	font-weight: bold;
