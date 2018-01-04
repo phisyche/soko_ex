@@ -51,7 +51,7 @@ img{
 /*--header--*/
 .header-main {
     background: rgba(0, 0, 0, 0.2);
-    background: #009688;
+    background: #0c2345;
     padding: 10px 0;
 }
 
@@ -86,7 +86,7 @@ a {
 }
 .navbar-default .navbar-brand {
      font-size: 3em;
-    color: white;
+    color: #009688;
     text-shadow: 3px 3px #000000;
 	text-decoration:none;
 	font-weight: bold;
@@ -264,7 +264,7 @@ ul.nav.navbar-nav {
 }
 
 ul.nav.navbar-nav.navbar-right li a {
-  color: white;
+  color: #009688;
 }
 
 .navbar-brand {

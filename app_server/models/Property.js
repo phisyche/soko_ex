@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 var superPagination = require('super-pagination').mongoose;
 
-var uri = 'mongodb://x_t:syche6847@ds239117.mlab.com:39117/soko_estate';
+//var uri = 'mongodb://x_t:syche6847@ds239117.mlab.com:39117/soko_estate';
 //var uri = 'mongodb://127.0.0.1/property';
-
+var uri = 'mongodb://ken:1234@ds137550.mlab.com:37550/to-do';
 var db = mongoose.connect(uri, {useMongoClient: true });
 mongoose.Promise =require('bluebird');
 
