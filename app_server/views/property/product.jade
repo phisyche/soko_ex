@@ -12,21 +12,19 @@ block content
                   img.img-thumbnail.img-responsive(src='/uploads/'+image.filename, width="100%" alt='')
           br
           br
-          h3 Features
-          p
-            !{property.features}
+ 
+        div(id='', style='overflow:scroll; height:400px;')
+          !{property.map}
+      .thumbnail.row
         .col-sm-6
-          h4.pull-right Kshs #{property.price}
           h4
             a(href='/property/#{property.slug}')
               sup
               =property.name
+          h4 Kshs #{property.price}
           p
             !{property.description}
-          br
-          a(href='/property/product_edit')
-            button.btn.btn-info(type='button') Edit property
-          br
-          br  
-          div(id='', style='overflow:scroll; height:400px;')
-            !{property.map}
+
+        h3 Features
+          p
+            !{property.features}

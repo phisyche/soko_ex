@@ -1450,7 +1450,7 @@ h3.tittle-w3 {
 		padding: 1em 2em;
 	}
 	.banner-dott1 {
-		min-height: 530px;
+		min-height: 430px;
 	}
 }
 @media screen and (max-width: 1280px){
@@ -1458,10 +1458,10 @@ h3.tittle-w3 {
 		margin-left: 29em;
 	}
 	.banner-dott1 {
-		min-height: 485px;
+		min-height: 400px;
 	}
 	.banner-text {
-		padding: 10em 0 0em 0;
+		padding: 0em 0 0em 0;
 	}
 }
 @media screen and (max-width: 1080px){
