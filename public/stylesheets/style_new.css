@@ -23,6 +23,11 @@ ul,label{
 	margin:0;
 	padding:0;
 }
+
+body a {
+  color: white;
+}
+
 body a:hover{
 	text-decoration:none;
 }
@@ -52,7 +57,7 @@ img{
 
 a {
   font-weight: bold;
-  font-style: oblique;
+  font-style: normal;
 }
 
 /*--header end here--*/
@@ -236,7 +241,7 @@ ul.nav.navbar-nav {
 /* //Rectangle In */
 .navbar-header h1 a {
     font-size: 1.4em;
-    color: #FFF;
+    color: white;
     letter-spacing: 2px;
     text-decoration: none;
     font-weight: 700;
@@ -257,6 +262,11 @@ ul.nav.navbar-nav {
 	text-transform: capitalize;
     text-align: center;
 }
+
+ul.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+
 .navbar-brand {
     float: left;
     padding:0!important;
