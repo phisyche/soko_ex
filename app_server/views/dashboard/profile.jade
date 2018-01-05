@@ -1,4 +1,4 @@
-extends dashboard_layout
+extends ../dashboard/dashboard1
 
 block content
   .container.py-3
@@ -16,19 +16,21 @@ block content
               .card-header
                 .container
                   .row
-                    .col-xs-12.col-sm-8.col-md-10
+                    .col-lg-6.col-lg-offset-1.pull-left
                       .well.well-sm
                         .row
                           .col-sm-6.col-md-8
                             h4
                               !{user.names}
-                            small
+                            p
                               cite(title='Nairobi, Kenya')
                                 | Nairobi, Kenya 
                                 i.glyphicon.glyphicon-map-marker
+                            br  
                             p
                               i.glyphicon.glyphicon-envelope
                                 !{user.email}
+                              br
                               br
                               i.glyphicon.glyphicon-globe
                                 !{user.phone}

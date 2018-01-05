@@ -4,32 +4,29 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Dashboard - Home
+    title Dashboard
     meta(name='description', content='')
     meta(name='author', content='templatemo')
   
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700', rel='stylesheet', type='text/css')
-    link(href='stylesheets/font-awesome.min.css', rel='stylesheet')
-    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
-    link(href='stylesheets/templatemo-style.css', rel='stylesheet')
+    link(href='/stylesheets/font-awesome.min.css', rel='stylesheet')
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(href='/stylesheets/templatemo-style.css', rel='stylesheet')
     script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     
   body
+    // Left column
     .templatemo-flex-row
       .templatemo-sidebar
         header.templatemo-site-header
           a(href='/')
-            img.img-responsive(src='/images/logo.png', alt='Profile Photo')
-        .profile-photo-container
-          a(src='/images/prof_pic.png')
-            img.img-responsive(src='/images/prof_pic.png', alt='Profile Photo')
-          .profile-photo-overlay
+            img.img-responsive(src='/images/logo.png', alt='logo')
         // Search box
         form.templatemo-search-form(role='search')
           .input-group
             button.fa.fa-search(type='submit')
-            input#srch-term.form-control(type='text', placeholder='Search', name='srch-term')
+            input#srch-term.form-control(type='text', placeholder='', name='srch-term')
         .mobile-menu-icon
           i.fa.fa-bars
         nav.templatemo-left-nav
@@ -47,9 +44,9 @@ html(lang='en')
                 i.fa.fa-bar-chart.fa-fw
                 | My Properties
             li
-              a(href='/dashboard/favourites')
-                i.fa.fa-star
-                | Favourites
+              a(href='/dashboard/maps')
+                i.fa.fa-map
+                | Maps
             li
               a(href='/dashboard/analytics')
                 i.fa.fa-bar-chart.fa-fw
@@ -71,16 +68,18 @@ html(lang='en')
                 li
                   a.active(href='/dashboard') Dashboard
                   
+          br
+                  
                   
           block content
-          footer.text-right
-            p
-              | Copyright © 2018 Sokoestate.com 
+        footer.text-right
+          p
+            | Copyright © 2018 Sokoestate.com 
 
     // JS
-    script(src='javascripts/jquery-1.11.2.min.js')
+    script(src='/javascripts/jquery-1.11.2.min.js')
     // jQuery
-    script(src='javascripts/jquery-migrate-1.2.1.min.js')
+    script(src='/javascripts/jquery-migrate-1.2.1.min.js')
     // jQuery Migrate Plugin
     script(src='https://www.google.com/jsapi')
     // Google Chart
@@ -132,5 +131,5 @@ html(lang='en')
       });
       }
       });
-    script(type='text/javascript', src='javascripts/templatemo-script.js')
+    script(type='text/javascript', src='/javascripts/templatemo-script.js')
     // Templatemo Script

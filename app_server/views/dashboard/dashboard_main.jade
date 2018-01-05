@@ -20,11 +20,7 @@ html(lang='en')
       .templatemo-sidebar
         header.templatemo-site-header
           a(href='/')
-            img.img-responsive(src='/images/logo.png', alt='Profile Photo')
-        .profile-photo-container
-          a(src='/images/prof_pic.png')
-            img.img-responsive(src='/images/prof_pic.png', alt='Profile Photo')
-          .profile-photo-overlay
+            img.img-responsive(src='/images/logo.png', alt='logo')
         // Search box
         form.templatemo-search-form(role='search')
           .input-group
@@ -47,9 +43,9 @@ html(lang='en')
                 i.fa.fa-bar-chart.fa-fw
                 | My Properties
             li
-              a(href='/dashboard/favourites')
-                i.fa.fa-star
-                | Favourites
+              a(href='/dashboard/maps')
+                i.fa.fa-map
+                | Maps
             li
               a(href='/dashboard/analytics')
                 i.fa.fa-bar-chart.fa-fw
@@ -98,62 +94,6 @@ html(lang='en')
               .progress
                 .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;') Houses
 
-            
-          .templatemo-content-container
-            .templatemo-content-widget.no-padding
-              .panel.panel-default.table-responsive
-                table.table.table-striped.table-bordered.templatemo-user-table
-                  thead
-                    tr
-                      td
-                        a.white-text.templatemo-sort-by(href='')
-                          | 
-                          span.caret
-                      td
-                        a.white-text.templatemo-sort-by(href='')
-                          | Name 
-                          span.caret
-                      td
-                        a.white-text.templatemo-sort-by(href='')
-                          | Category 
-                          span.caret
-                      td
-                        a.white-text.templatemo-sort-by(href='')
-                          | Price 
-                          span.caret
-                      td
-                        a.white-text.templatemo-sort-by(href='')
-                          | Location 
-                          span.caret
-                      td Edit
-                      td Action
-                      td Delete
-                  tbody
-                    tr
-                      td 1.
-                      td Bungalow in Kileleshwa
-                      td House
-                      td Kshs 10 Million
-                      td Kileleshwa, Nairobi
-                      td
-                        a.templatemo-edit-btn(href='') Edit
-                      td
-                        a.templatemo-link(href='') Action
-                      td
-                        a.templatemo-link(href='') Delete
-                    tr
-                      td 2.
-                      td Bill
-                      td Jones
-                      td @bJ
-                      td bj@company.com
-                      td
-                        a.templatemo-edit-btn(href='') Edit
-                      td
-                        a.templatemo-link(href='') Action
-                      td
-                        a.templatemo-link(href='') Delete
-                    
             
           footer.text-right
             p

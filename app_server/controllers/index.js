@@ -16,27 +16,27 @@ res.render('index', { title: 'Property Forum' });
 };
 
 module.exports.analytics = function(req, res){
-res.render('layouts/analytics', { title: 'Analytics' });
+res.render('dashboard/analytics', { title: 'Analytics' });
 };
 
 /* GET home page */
 module.exports.dashboard = function(req, res){
 	if(res.locals.user.role == '1')
-		res.render('dashboard/dashboard3', { title: 'Admin Dashboard' });
-	res.render('dashboard/dashboard3', { title: 'User Dashboard' });
+		res.render('dashboard/dashboard_main', { title: 'Admin Dashboard' });
+	res.render('dashboard/dashboard_main', { title: 'User Dashboard' });
 };
 
 module.exports.listing = function(req, res){
 	propertyModel.find({user_id: res.locals.user.username}, function(err, data){
 		if(err) throw err;
-			res.render('layouts/my_listing', {title: 'My Listings', propertys: data, });
+			res.render('dashboard/my_listing', {title: 'My Listings', propertys: data, });
 	})
 };
 
 module.exports.profile = function(req, res){
-res.render('layouts/profile', { title: 'My Profile' });
+res.render('dashboard/profile', { title: 'My Profile' });
 };
 
 module.exports.favourites = function(req, res){
-res.render('layouts/favourites', { title: 'My Favourites' });
+res.render('dashboard/maps', { title: 'My Favourites' });
 };

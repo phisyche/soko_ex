@@ -1,0 +1,61 @@
+extends ../dashboard/dashboard1
+
+block content
+  .container
+    .row
+      .col-sm-9
+        h3.list_head My Listings
+      .col-sm-3
+        a(href='/property/new')
+          button.btn.btn-info Add new Listing 
+  .templatemo-content-container
+    .templatemo-content-widget.no-padding
+      .panel.panel-default.table-responsive
+        table.table.table-striped.table-bordered.templatemo-user-table
+          thead
+            tr
+              td
+                a.white-text.templatemo-sort-by(href='')
+                  | 
+                  span.caret
+              td
+                a.white-text.templatemo-sort-by(href='')
+                  | Property Name 
+                  span.caret
+              td
+                a.white-text.templatemo-sort-by(href='')
+                  | Category 
+                  span.caret
+              td
+                a.white-text.templatemo-sort-by(href='')
+                  | Price 
+                  span.caret
+              td
+                a.white-text.templatemo-sort-by(href='')
+                  | Location 
+                  span.caret
+              td
+                a.white-text.templatemo-sort-by(href='')
+                  | Features 
+                  span.caret
+              td Edit
+              td Action
+              td Delete
+          tbody
+            each property in propertys
+              tr
+                td 
+                td 
+                  a(href='/property/#{property.slug}')
+                    sup
+                    =property.name
+                td !{property.category}
+                td Kshs !{property.price}
+                td !{property.city}
+                td !{property.features}
+                td
+                  a.templatemo-edit-btn(href='') Edit
+                td
+                  a.templatemo-link-btn(href='') Action
+                td
+                  a.templatemo-link-btn(href='') Delete

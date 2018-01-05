@@ -24,6 +24,14 @@ h3 {
 	color: #7f7f7f;
 	font-size: 1.4em;
 }
+
+.row {
+    margin-right: 100px;
+    margin-left: 20px;
+}
+p {
+	font-size: 15px;
+}
 ul {
 	list-style-type: none;
     margin: 0;
@@ -32,7 +40,7 @@ ul {
 a:hover { text-decoration: none; }
 nav li {
 	font-size: 1.1em;
-	list-style: none;	
+	list-style: none;
 	text-transform: uppercase;
 }
 .templatemo-inline-block {
@@ -102,7 +110,7 @@ footer { padding: 15px; }
 	font-size: 1.8em;
 	font-weight: 300;
 	letter-spacing: 1.5px;
-	margin: 0 5px;	
+	margin: 0 5px;
 	text-transform: uppercase;
 	vertical-align: middle;
 }
@@ -121,7 +129,7 @@ footer { padding: 15px; }
 /* Search form */
 .templatemo-search-form {
 	font-size: 1.1em;
-	margin: 50px 20px;		
+	margin: 50px 20px;
 }
 .templatemo-search-form .input-group { width: 100%; }
 .templatemo-search-form .input-group .form-control {
@@ -167,9 +175,9 @@ footer { padding: 15px; }
 	left: 0;
 	z-index: 100;
 }
-.mobile-menu-icon { 
+.mobile-menu-icon {
 	cursor:pointer;
-	display:none; 
+	display:none;
 }
 .templatemo-left-nav li { font-weight: 300; }
 .templatemo-left-nav a.active,
@@ -212,7 +220,7 @@ footer { padding: 15px; }
 .templatemo-content {
   margin-top: 0px;
   min-height: 600px;
-  padding: 0;  
+  padding: 0;
   overflow-x: hidden;
 }
 .templatemo-content-container {	padding: 40px 50px; }
@@ -235,7 +243,7 @@ footer { padding: 15px; }
 /* Content Widget */
 .templatemo-content-widget {
 	border-radius: 10px;
-	padding: 30px;	
+	padding: 30px;
 	position: relative;
 	margin: 10px;
  	box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
@@ -285,15 +293,15 @@ footer { padding: 15px; }
 	border-color: #E9E8E8;
 	color: #a6a6a6;
 	margin: 2px;
-	padding: 10px;	
+	padding: 10px;
 }
 .pagination>li>a,
 .pagination>li:first-child>a,
 .pagination>li:last-child>a {
 	border-radius: 10px;
 }
-.pagination>.active>a, 
-.pagination>.active>a:focus, 
+.pagination>.active>a,
+.pagination>.active>a:focus,
 .pagination>.active>a:hover {
 	background-color: #39ADB4;
 	border-color: #E9E8E8;
@@ -356,11 +364,11 @@ footer { padding: 15px; }
 .btn-primary {
 	border-radius: 2px;
 	background-color: #39ADB4;
-	border: none;	
-	color: white;	
+	border: none;
+	color: white;
 }
 .btn-primary:hover { background-color: #2A858B; }
-.templatemo-blue-button, 
+.templatemo-blue-button,
 .templatemo-white-button {
 	border-radius: 2px;
 	padding: 10px 30px;
@@ -369,14 +377,14 @@ footer { padding: 15px; }
 }
 .templatemo-blue-button {
 	background-color: #39ADB4;
-	border: none;	
-	color: white;	
+	border: none;
+	color: white;
 }
 .templatemo-blue-button:hover {	background-color: #2A858B; }
 .templatemo-white-button {
 	background-color: white;
-	border: 1px solid #39ADB4;	
-	color: #39ADB4;	
+	border: 1px solid #39ADB4;
+	color: #39ADB4;
 }
 .templatemo-white-button:hover { background-color: #eff2f3;	}
 .templatemo-register-widget {
@@ -515,7 +523,7 @@ input[type="radio"]:checked + label span {
 	text-align: center;
 }
 .templatemo-view-img-btn {
-	background-color: #f4f3f3;	
+	background-color: #f4f3f3;
 	border: none;
 	border-radius: 5px;
 	color: #a6a6a6;
@@ -530,20 +538,20 @@ input[type="radio"]:checked + label span {
 
 /* 7. Preferences
 -------------------------------*/
-.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, 
-.has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, 
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block,
+.has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label,
 .has-success.radio label, .has-success.radio-inline label {
 	color: #13895F;
 }
 .has-success .form-control { border-color: #13895F; }
-.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, 
-.has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, 
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block,
+.has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label,
 .has-warning.radio label, .has-warning.radio-inline label {
 	color: #CF922C;
 }
 .has-warning .form-control { border-color: #CF922C; }
-.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, 
-.has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, 
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block,
+.has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label,
 .has-error.radio label, .has-error.radio-inline label {
 	color: #D7425C;
 }
@@ -551,7 +559,7 @@ input[type="radio"]:checked + label span {
 .templatemo-multi-select {
 	min-width: 200px;
 	height: 100px;
-	overflow-y: scroll;	
+	overflow-y: scroll;
 }
 
 /* 8. Media Queries
@@ -571,26 +579,26 @@ input[type="radio"]:checked + label span {
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
 	.templatemo-site-header,
-	.templatemo-search-form { 
-		margin: 15px; 
+	.templatemo-search-form {
+		margin: 15px;
 	}
-	.templatemo-sidebar { width: 200px; } 
+	.templatemo-sidebar { width: 200px; }
 	.templatemo-site-header h1 { font-size: 1.6em; }
-	.square { 
-		width: 20px; 
+	.square {
+		width: 20px;
 		height: 20px;
 	}
 	.templatemo-left-nav a.active,
 	.templatemo-left-nav a:hover {
-		border-left: 6px solid #13895F;		
-	}	
+		border-left: 6px solid #13895F;
+	}
 	.templatemo-top-nav-container {	padding: 17px 30px;	}
 	.templatemo-top-nav a { padding: 0 15px; }
 }
 
 @media screen and (max-width: 992px) {
 	nav li { font-size: 1em; }
-	.templatemo-left-nav a { padding: 15px 10px; }	
+	.templatemo-left-nav a { padding: 15px 10px; }
 	.templatemo-content-container {	padding: 10px; }
 }
 @media only screen and (min-width: 768px) {
@@ -602,9 +610,9 @@ input[type="radio"]:checked + label span {
 	.profile-photo-container {	display: none; /* Hide profile photo on mobile view */	}
 	.templatemo-search-form { margin: 10px; }
 	.templatemo-top-nav-container {	padding: 10px; }
-	.templatemo-top-nav a { 
+	.templatemo-top-nav a {
 		border-left: 1px solid #c5c5c5;
-		padding: 0 7px; 
+		padding: 0 7px;
 	}
 	.templatemo-top-nav li:last-child a { border-right: 1px solid #c5c5c5; }
 	.templatemo-content-widget { padding: 15px;	}
@@ -614,15 +622,15 @@ input[type="radio"]:checked + label span {
 		display: none;
 		position: fixed;
 		top: 10px;
-		right: 50px;		
+		right: 50px;
 		height: 300px;
 		overflow: auto;
 		width: 200px;
 		z-index: 999;
 	}
-	.templatemo-left-nav a.active, 
+	.templatemo-left-nav a.active,
 	.templatemo-left-nav a:hover {
-		border-left: 4px solid #13895F;	
+		border-left: 4px solid #13895F;
 	}
 	.mobile-menu-icon {
 		cursor: pointer;

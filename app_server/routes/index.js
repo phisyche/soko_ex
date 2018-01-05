@@ -20,8 +20,8 @@ router.post('/register', ctrlAccounts.registerPost);
 router.get('/dashboard', roles.auth, ctrlIndex.dashboard);
 router.get('/dashboard/profile', roles.auth, ctrlIndex.profile);
 router.get('/dashboard/mylistings', roles.auth, ctrlIndex.listing);
-router.get('/dashboard/favourites', roles.auth, ctrlIndex.favourites);
-router.get('/analytics', ctrlIndex.analytics);
+router.get('/dashboard/maps', roles.auth, ctrlIndex.favourites);
+router.get('/dashboard/analytics', roles.auth, ctrlIndex.analytics);
 
 
 /* Other pages */
