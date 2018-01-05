@@ -10,11 +10,22 @@ block content
             .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
               ul#myTab.nav.nav-tabs(role='tablist', data-aos='zoom-in')
                 li.active(role='presentation')
-                  a(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') For sale
+                  a(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') Residential Properties
                 li(role='presentation')
-                  a(href='#teach', role='tab', data-toggle='tab', aria-controls='teach') For Rent
-                li(role='presentation')
-                  a(href='#train', role='tab', data-toggle='tab', aria-controls='train') New Projects
+                  a(href='#train', role='tab', data-toggle='tab', aria-controls='train') Commercial Properties
+            br
+            .select_property
+              .radio
+                label
+                  input(type='radio', name='optradio')
+                  | For Sale
+              br
+              .radio
+                label
+                  input(type='radio', name='optradio')
+                  | For Rent
+            br
+            br
             form(action='#', method='post')
               .col-md-12.form-time-w3layouts
                 label
@@ -26,10 +37,12 @@ block content
                   i.fa.fa-home(aria-hidden='true')
                   |  Category
                 select.form-control
-                  option Real estate
-                  option Real Homes
-                  option Apartments
-                  option Real Flats
+                  option Houses
+                  option Flats and Apartments
+                  option Townhouses
+                  option Bungalows
+                  option Bedsitters
+                  option Rooms
               .col-md-3.form-date-w3-agileits
                 label
                   i.fa.fa-money(aria-hidden='true')
@@ -39,7 +52,15 @@ block content
                 label
                   i.fa.fa-hotel(aria-hidden='true')
                   |  Bedrooms
-                input(type='text', placeholder='Min. Bedrooms', required='')
+                select.form-control
+                  option 1
+                  option 2
+                  option 3
+                  option 4
+                  option 5
+                  option 6
+                  option 7
+                  option 8
               .col-md-3.form-left-agileits-submit
                 input(type='submit', value='Search')
 
