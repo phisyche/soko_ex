@@ -143,10 +143,21 @@ html(lang='en')
   // scrolling script
   script(type='text/javascript').
     jQuery(document).ready(function($) {
-    $(".scroll").click(function(event){
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-    });
+      
+      $('#choose_commercial').hide();
+      
+      $(".scroll").click(function(event){
+      event.preventDefault();
+      
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+      
+      $(".prop_select").click(function(event){
+        $('#choose_residential').hide();
+      });
+      $(".prop_select").click(function(event){
+        $('#choose_commercial').show();
+      });
     });
   // //scrolling script
   // testimonilas slider
@@ -177,3 +188,5 @@ html(lang='en')
     });
   script(type='text/javascript', src='/javascripts/jquery.flexisel.js')
   // testimonilas slider
+  script(type='text/javascript').
+    

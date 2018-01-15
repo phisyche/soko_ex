@@ -7,25 +7,31 @@ block content
         .banner-text
           h2 Buy or Rent Property in Kenya
           .book-form
-            .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
-              ul#myTab.nav.nav-tabs(role='tablist', data-aos='zoom-in')
-                li.active(role='presentation')
-                  a(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') Residential Properties
-                li(role='presentation')
-                  a(href='#train', role='tab', data-toggle='tab', aria-controls='train') Commercial Properties
-            br
+            ul.nav.nav-tabs(role='tablist')
+              li.active(role='presentation')
+                a(href='#commercial', aria-controls='commercial', role='tab', data-toggle='tab') For Rent
+              li(role='presentation')
+                a(href='#residential', aria-controls='residential', role='tab', data-toggle='tab') For Sale
+                .tab-content
+                  #commercial.tab-pane.active(role='tabpanel')
+
+                  #residential.tab-pane(role='tabpanel')
+            br  
+                
             .select_property
-              .radio
+              .radio()
                 label
-                  input(type='radio', name='optradio')
-                  | For Sale
+                  input(type='radio', name='optradio', class='prop_select', id='commercial')
+                  | Commercial
               br
               .radio
                 label
-                  input(type='radio', name='optradio')
-                  | For Rent
-            br
-            br
+                  input(type='radio', name='optradio', class='prop_select', id='residential')
+                  | Residential
+                  
+              br
+              br      
+                      
             form(action='#', method='post')
               .col-md-12.form-time-w3layouts
                 label
@@ -36,13 +42,20 @@ block content
                 label
                   i.fa.fa-home(aria-hidden='true')
                   |  Category
-                select.form-control
+                select.form-control(id='choose_residential')
+                  option Choose Residential property
                   option Houses
                   option Flats and Apartments
                   option Townhouses
                   option Bungalows
                   option Bedsitters
                   option Rooms
+                select.form-control(id='choose_commercial')
+                  option Choose Commercial property
+                  option Offices
+                  option Warehouses
+                  option Shops
+                  option Stalls
               .col-md-3.form-date-w3-agileits
                 label
                   i.fa.fa-money(aria-hidden='true')
