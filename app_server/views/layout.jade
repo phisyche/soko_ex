@@ -151,7 +151,9 @@ html(lang='en')
       
       $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
       });
-      
+      $(".residential").click(function(event){
+        $('#choose_residential').hide();
+      });
       $(".prop_select").click(function(event){
         $('#choose_residential').hide();
       });

@@ -9,9 +9,11 @@ block content
           .book-form
             ul.nav.nav-tabs(role='tablist')
               li.active(role='presentation')
-                a(href='#commercial', aria-controls='commercial', role='tab', data-toggle='tab') For Rent
+                a(href='#residential', aria-controls='commercial', role='tab', data-toggle='tab', class='prop_select', id='residential') Residential
               li(role='presentation')
-                a(href='#residential', aria-controls='residential', role='tab', data-toggle='tab') For Sale
+                a(href='#commercial', aria-controls='residential', role='tab', data-toggle='tab', class='prop_select', id='commercial') Commercial
+              li(role='presentation')
+                a(href='#land', aria-controls='residential', role='tab', data-toggle='tab', class='prop_select', id='land') Land
                 .tab-content
                   #commercial.tab-pane.active(role='tabpanel')
 
@@ -21,13 +23,13 @@ block content
             .select_property
               .radio()
                 label
-                  input(type='radio', name='optradio', class='prop_select', id='commercial')
-                  | Commercial
+                  input(type='radio', name='optradio')
+                  | For Sale
               br
               .radio
                 label
-                  input(type='radio', name='optradio', class='prop_select', id='residential')
-                  | Residential
+                  input(type='radio', name='optradio')
+                  | For Rent
                   
               br
               br      
